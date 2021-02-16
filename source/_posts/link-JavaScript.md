@@ -23,5 +23,9 @@ date: 2021-02-14 02:06:53
     - [所有的函式都是閉包：談 JS 中的作用域與 Closure - TechBridge 技術共筆部落格](https://blog.techbridge.cc/2018/12/08/javascript-closure/) - 2018
     - [閉包 - WangDoc](https://wangdoc.com/javascript/types/function.html#%E9%97%AD%E5%8C%85)
 
+#### 其他議題
+  - ##### JSDoc 文檔註解
+    - [Javascript文檔註解規則使用方式 @use JSDoc - ucamc](https://www.ucamc.com/e-learning/javascript/250-javascript-use-jsdoc) - 2018
+
 #### 第三方套件
   - [Rallax.js - 滾動視差效果](https://chriscavs.github.io/rallax-demo/)

@@ -1,12 +1,13 @@
 ---
-title: '[link] Vue.js'
+title: '[link]_Vue.js'
 date: 2021-02-11 01:25:59
-tags: [Vue]
+tags: [Vue, 框架]
 # categories: vue
 ---
 
 #### 系列文章
   - [Vue系列 - PJCHENder](https://pjchender.blogspot.com/search/label/Vue)
+  - [Vue系列 - Kuro](https://kuro.tw/)
 
 <!-- more -->
 #### 入門
