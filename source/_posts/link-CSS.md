@@ -1,5 +1,5 @@
 ---
-title: '[link] CSS'
+title: '[link]_CSS'
 tags: [CSS]
 # categories: []
 date: 2021-02-14 01:53:00
