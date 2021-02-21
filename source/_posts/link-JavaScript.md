@@ -10,10 +10,12 @@ date: 2021-02-14 02:06:53
   - [JS30 - PJCHENder](https://pjchender.blogspot.com/2017/06/js30.html) - 2017
   - [ECMASCRIPT - openhome](https://openhome.cc/Gossip/ECMAScript/index.html)
   - [JavaScript 教程 - WangDoc](https://wangdoc.com/javascript/index.html)
+  - [[iT邦] 重新認識 JavaScript - Kuro](https://ithelp.ithome.com.tw/users/20065504/ironman/1259) - 2018
   - ##### ES6
     - [ECMAScript 6 入門 - 阮一峰](https://es6.ruanyifeng.com/)
 
 <!-- more -->
+
 #### 基礎
   - ##### 編程風格
     - [編程風格 - 阮一峰](https://es6.ruanyifeng.com/#docs/style)
@@ -28,8 +30,14 @@ date: 2021-02-14 02:06:53
     - [閉包 - WangDoc](https://wangdoc.com/javascript/types/function.html#%E9%97%AD%E5%8C%85)
 
 #### 其他議題
+  - [拖曳時，禁止觸發點擊事件的三種方法 - CSDN](https://blog.csdn.net/dKnightL/article/details/89517010) - 2019
   - ##### JSDoc 文檔註解
     - [Javascript文檔註解規則使用方式 @use JSDoc - ucamc](https://www.ucamc.com/e-learning/javascript/250-javascript-use-jsdoc) - 2018
 
+  - [使用window.onerror捕獲並報告JavaScript錯誤 - SENTRY](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror) - 2016
+  - [JS 冷知識: 你所不知道的 void - Kuro](https://kuro.tw/posts/2019/08/04/JS-%E5%86%B7%E7%9F%A5%E8%AD%98-%E4%BD%A0%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-void/) - 2019
+  - [網頁的生命週期 - Kuro](https://ithelp.ithome.com.tw/articles/10197335) - 2018
+
 #### 第三方套件
   - [Rallax.js - 滾動視差效果](https://chriscavs.github.io/rallax-demo/)
+  - [dragscroll.js - 拖曳捲動](https://github.com/asvd/dragscroll)

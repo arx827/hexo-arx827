@@ -13,8 +13,11 @@ date: 2021-02-14 01:53:00
     - [[iT邦] 金魚都能懂的CSS必學屬性 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/3803) - 2020
 
 <!-- more -->
+
 #### 工具
   - [CSS速查表](https://code.ciaoca.com/style/css-cheat-sheet/)
+  - ##### reset
+    - [normalize.css](https://github.com/necolas/normalize.css)
 
 #### 基礎
   - ##### CSS選取器
