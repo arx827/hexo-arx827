@@ -8,5 +8,6 @@ tags: [HTTP]
   - [HTTP系列 - MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP)
   - [[iT邦] GraphQL系列 - fx777](https://ithelp.ithome.com.tw/users/20111997/ironman/1878)
 
+<!-- more -->
 #### 跨源資源共享 (CORS)
   - [CORS - MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)

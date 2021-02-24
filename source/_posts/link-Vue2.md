@@ -1,13 +1,14 @@
 ---
-title: '[link]_VueJs'
+title: '[link]_Vue2'
 date: 2021-02-11 01:25:59
-tags: [Vue, 框架]
+tags: [Vue2, 框架]
 # categories: vue
 ---
 
 #### 系列文章
   - [Vue系列 - PJCHENder](https://pjchender.blogspot.com/search/label/Vue)
   - [Vue系列 - Kuro](https://kuro.tw/)
+  - [Vue系列 - Fortes Huang](https://hackmd.io/@FortesHuang)
 
 <!-- more -->
 
