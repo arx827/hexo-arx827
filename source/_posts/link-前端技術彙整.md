@@ -4,8 +4,6 @@ date: 2021-02-11 03:00:56
 tags: [前端技術彙整]
 ---
 #### 從零開始
-  - [Summer。桑莫。夏天](https://cythilya.github.io/)
-  - [TechBridge 技術共筆部落格](https://blog.techbridge.cc/)
   - [[iT邦] 前端菜焦阿日記 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/1914) - 2018
   - [[iT邦] 前端新手村 - Chris](https://ithelp.ithome.com.tw/users/20107637/ironman/1457) - 2017
   - [[iT邦] 前端新手進化史 - yachen](https://ithelp.ithome.com.tw/users/20120740/ironman/2632) - 2019
@@ -14,6 +12,11 @@ tags: [前端技術彙整]
   - [紮實的網頁前端學習路線與資源推薦 - Huli](https://blog.huli.tw/2019/08/21/real-front-end-learning-path/) - 2019
 
 <!-- more -->
+
+#### 平台
+  - [[blog] Summer。桑莫。夏天](https://cythilya.github.io/)
+  - [[blog] TechBridge 技術共筆部落格](https://blog.techbridge.cc/)
+  - [[blog] 那些沒告訴你的小細節 - PJCHENder](https://pjchender.blogspot.com/)
 
 #### 切版
   - [[iT邦] 金魚都能懂的網頁切版 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2623) - 2019

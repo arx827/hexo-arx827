@@ -37,6 +37,7 @@ date: 2021-02-14 02:06:53
   - [使用window.onerror捕獲並報告JavaScript錯誤 - SENTRY](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror) - 2016
   - [JS 冷知識: 你所不知道的 void - Kuro](https://kuro.tw/posts/2019/08/04/JS-%E5%86%B7%E7%9F%A5%E8%AD%98-%E4%BD%A0%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-void/) - 2019
   - [網頁的生命週期 - Kuro](https://ithelp.ithome.com.tw/articles/10197335) - 2018
+  - [[筆記] 了解JavaScript中原型(prototype)、原型鍊（prototype chain）和繼承(inheritance)的概念 - PJCHENder](https://pjchender.blogspot.com/2016/06/javascriptprototypeprototype.html) - 2016
 
 #### 第三方套件
   - [Rallax.js - 滾動視差效果](https://chriscavs.github.io/rallax-demo/)
