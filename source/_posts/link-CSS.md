@@ -56,6 +56,9 @@ date: 2021-02-14 01:53:00
     - [[iT邦] Collapsing margins - yachen](https://ithelp.ithome.com.tw/articles/10218740)
   - ##### 滿版
     - [object-fit - CSS-TRICKS](https://css-tricks.com/almanac/properties/o/object-fit/)
+
+  - ##### 判斷觸控設備
+    - [CSS any-hover any-pointer media查询与交互体验提升 - 鑫空間,鑫生活](https://www.zhangxinxu.com/wordpress/2020/01/css-any-hover-media/) - 2020
     
 #### 神人膜拜區
   - [Moustached Nanny - Julia Miocene](https://codepen.io/miocene/pen/mjLPVp)、[作者 - Julia Miocene](https://codepen.io/miocene)

@@ -4,11 +4,12 @@ date: 2021-02-11 03:00:56
 tags: [前端技術彙整]
 ---
 #### 從零開始
-  - [[iT邦] 前端菜焦阿日記 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/1914) - 2018
+  - [新手前端日記 - chibc](https://ithelp.ithome.com.tw/users/20060646/ironman/477) - 2012
   - [[iT邦] 前端新手村 - Chris](https://ithelp.ithome.com.tw/users/20107637/ironman/1457) - 2017
-  - [[iT邦] 前端新手進化史 - yachen](https://ithelp.ithome.com.tw/users/20120740/ironman/2632) - 2019
   - [[iT邦] 金魚都能懂的網頁設計入門 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2072) - 2018
+  - [[iT邦] 前端菜焦阿日記 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/1914) - 2018
   - [[Youtube] 金魚都能懂的網頁設計入門 - CSScoke](https://www.youtube.com/playlist?list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre) - 2018
+  - [[iT邦] 前端新手進化史 - yachen](https://ithelp.ithome.com.tw/users/20120740/ironman/2632) - 2019
   - [紮實的網頁前端學習路線與資源推薦 - Huli](https://blog.huli.tw/2019/08/21/real-front-end-learning-path/) - 2019
 
 <!-- more -->
