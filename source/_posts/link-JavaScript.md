@@ -21,6 +21,8 @@ date: 2021-02-14 02:06:53
     - [編程風格 - 阮一峰](https://es6.ruanyifeng.com/#docs/style)
   - ##### console
     - [除Console.log()外更多的Javascript除錯命令 - 程式前沿](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/218950/)
+  - ##### Array
+    - [JavaScript Array 陣列操作方法大全 ( 含 ES6 ) - oxxostudio](https://www.oxxostudio.tw/articles/201908/js-array.html) - 2019
     
   - ##### 閉包
     - [閉包 - openhome](https://openhome.cc/Gossip/JavaScript/Closure.html)

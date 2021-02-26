@@ -20,6 +20,7 @@ tags: [前端技術彙整]
   - [[blog] 那些沒告訴你的小細節 - PJCHENder](https://pjchender.blogspot.com/)
   - [[blog] 卡斯伯](https://wcc723.github.io/)
   - [[blog] 愷開](https://medium.com/@kalanyei)
+  - [[blog] oxxostudio](https://www.oxxostudio.tw/list.html)
 
 #### 切版
   - [[iT邦] 金魚都能懂的網頁切版 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2623) - 2019

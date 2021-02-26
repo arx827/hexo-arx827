@@ -16,6 +16,7 @@ tags: [Vue2, 框架]
   - [[iT邦] Vue.js 30天 - Ralph](https://ithelp.ithome.com.tw/users/20103424/ironman/1049) - 2016
   - [[iT邦] 前端新手筆記-Vue.js - chunwen](https://ithelp.ithome.com.tw/users/20114645/ironman/2811) - 2019
   - [[iT邦] 技術在走，Vue.js 要有 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/2614) - 2019
+  - [[iT邦] 學習 vue 30天 - sunbu](https://ithelp.ithome.com.tw/users/20109609/ironman/2233) - 2019
 
 #### 小技巧
   - ##### 父子關係

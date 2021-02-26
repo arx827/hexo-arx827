@@ -24,6 +24,7 @@ date: 2021-02-14 01:53:00
     - [[iT邦] 金魚都能懂的 CSS 選取器 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2799) - 2019
   - ##### CSS模組化(設計模式)
     - [OOCSS、SMACSS、BEM、CSS Modules、CSS in JS - Summer。桑莫。夏天](https://cythilya.github.io/2018/06/05/css-methodologies/) - 2018
+    - [BEM，CSS 設計模式 - 竹白記事本](https://chupainotebook.blogspot.com/2019/05/bemcss.html?m=1) - 2019
   - ##### CSS變數
     - [原生 CSS 變數運用技巧 - W3HexSchool](https://w3c.hexschool.com/blog/21985acb) - 2019
   - ##### CSS權重
