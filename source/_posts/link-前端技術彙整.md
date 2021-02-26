@@ -17,6 +17,8 @@ tags: [前端技術彙整]
   - [[blog] Summer。桑莫。夏天](https://cythilya.github.io/)
   - [[blog] TechBridge 技術共筆部落格](https://blog.techbridge.cc/)
   - [[blog] 那些沒告訴你的小細節 - PJCHENder](https://pjchender.blogspot.com/)
+  - [[blog] 卡斯伯](https://wcc723.github.io/)
+  - [[blog] 愷開](https://medium.com/@kalanyei)
 
 #### 切版
   - [[iT邦] 金魚都能懂的網頁切版 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2623) - 2019

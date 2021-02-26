@@ -15,3 +15,8 @@ tags: [SASS/SCSS]
 
 #### Animation
   - [利用 SCSS 更方便的使用 CSS Animation - Jay](https://happyjayxin.medium.com/%E5%88%A9%E7%94%A8-scss-%E6%9B%B4%E7%B0%A1%E6%BD%94%E7%9A%84%E4%BD%BF%E7%94%A8-css-animation-f0717a958a69) - 2019
+
+#### 其他議題
+  - [HSL function - 卡斯伯](https://wcc723.github.io/sass/2013/08/26/sass-hsl-funtion/) - 2013
+  - [你可能不知道的 Sass 技巧 - 愷開](https://medium.com/d-d-mag/%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-sass-%E6%8A%80%E5%B7%A7-c97d4d5e0fc4) - 2017
+  
