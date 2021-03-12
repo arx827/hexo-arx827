@@ -11,6 +11,7 @@ date: 2021-02-14 02:06:53
   - [ECMASCRIPT - openhome](https://openhome.cc/Gossip/ECMAScript/index.html)
   - [JavaScript 教程 - WangDoc](https://wangdoc.com/javascript/index.html)
   - [[iT邦] 重新認識 JavaScript - Kuro](https://ithelp.ithome.com.tw/users/20065504/ironman/1259) - 2018
+  - [[Youtube] 深入淺出 Javascript30 快速導覽 - Alex 宅幹嘛](https://www.youtube.com/playlist?list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq) - 2020
   - ##### ES6
     - [ECMAScript 6 入門 - 阮一峰](https://es6.ruanyifeng.com/)
 
@@ -44,3 +45,5 @@ date: 2021-02-14 02:06:53
 #### 第三方套件
   - [Rallax.js - 滾動視差效果](https://chriscavs.github.io/rallax-demo/)
   - [dragscroll.js - 拖曳捲動](https://github.com/asvd/dragscroll)
+  - #### 瀑布流
+    - [isotope.js - 可篩選排序的瀑布流](https://isotope.metafizzy.co/)

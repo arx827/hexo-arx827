@@ -19,12 +19,16 @@ tags: [前端技術彙整]
   - [[blog] TechBridge 技術共筆部落格](https://blog.techbridge.cc/)
   - [[blog] 那些沒告訴你的小細節 - PJCHENder](https://pjchender.blogspot.com/)
   - [[blog] 卡斯伯](https://wcc723.github.io/)
-  - [[blog] 愷開](https://medium.com/@kalanyei)
+  - [[medium] 愷開](https://medium.com/@kalanyei)
   - [[blog] oxxostudio](https://www.oxxostudio.tw/list.html)
+  - [[medium] sexyoung](https://medium.com/@sexyoung1985)
+  - [[Youtube] 網站開發直播主題集合 - Alex 宅幹嘛](https://www.youtube.com/playlist?list=PLEfh-m_KG4dZcmTWAHWDgiLhkFAQh-xpA) - 2018
+  - [[blog] 搞搞就懂 - CHRIS CHEN](https://dotblogs.com.tw/wasichris)
 
 #### 切版
   - [[iT邦] 金魚都能懂的網頁切版 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2623) - 2019
   - [[Youtube] 金魚都能懂的網頁切版 - CSScoke](https://www.youtube.com/playlist?list=PLqivELodHt3hxeuLX8PYaI8u1GcDaBoJo) - 2019
+  - [[iT邦] 我說那個手機版 - 閃光洽](https://ithelp.ithome.com.tw/users/20001433/ironman/3142?page=1) - 2020
 
 #### 團隊合作
   - [團隊規範 - springleo](https://lq782655835.github.io/blogs/team-standard/0.standard-ai-summary.html)

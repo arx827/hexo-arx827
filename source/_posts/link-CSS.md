@@ -60,6 +60,10 @@ date: 2021-02-14 01:53:00
 
   - ##### 判斷觸控設備
     - [CSS any-hover any-pointer media查询与交互体验提升 - 鑫空間,鑫生活](https://www.zhangxinxu.com/wordpress/2020/01/css-any-hover-media/) - 2020
+  
+  - ##### 幾何圖形
+    - [用純css做幾何圖形的技巧 (一) - 每日頭條](https://kknews.cc/code/6ae4lop.html) - 2019
+    - [用純css做幾何圖形的技巧（二）clip-path - 每日頭條](https://kknews.cc/zh-tw/code/nle3rk8.html) - 2019
     
 #### 神人膜拜區
   - [Moustached Nanny - Julia Miocene](https://codepen.io/miocene/pen/mjLPVp)、[作者 - Julia Miocene](https://codepen.io/miocene)

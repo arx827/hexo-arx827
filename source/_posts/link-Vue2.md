@@ -9,14 +9,23 @@ tags: [Vue2, 框架]
   - [Vue系列 - PJCHENder](https://pjchender.blogspot.com/search/label/Vue)
   - [Vue系列 - Kuro](https://kuro.tw/)
   - [Vue系列 - Fortes Huang](https://hackmd.io/@FortesHuang)
+  - [搞搞就懂 - CHRIS CHEN](https://dotblogs.com.tw/wasichris/Series?qq=Vue)
+
+  - ##### [Youtube] Vue系列 - Alex 宅幹嘛
+    - [Vue.js 手牽手，一起嗑光全家桶](https://www.youtube.com/playlist?list=PLEfh-m_KG4dYor8h4Hi2lqKJ0xqNTFh16) - 2018
+    - [Re Vue 重頭說起 第一季](https://www.youtube.com/playlist?list=PLEfh-m_KG4dapPjoPvWX0c8JCK6-mIvGr) - 2020
+    - [Re Vue 重頭說起 第二季](https://www.youtube.com/playlist?list=PLEfh-m_KG4daEhioHKZqrkGXAedXIQ2Cn) - 2020
+    - [Re Vue 重頭說起 第三季](https://www.youtube.com/playlist?list=PLEfh-m_KG4dbIlLGrUsF-cQW-mNPNwf1O) - 2020
 
 <!-- more -->
-
 #### 入門
   - [[iT邦] Vue.js 30天 - Ralph](https://ithelp.ithome.com.tw/users/20103424/ironman/1049) - 2016
+  - [[iT邦] 網頁設計靠 Vue.js 轉前端 - adam747](https://ithelp.ithome.com.tw/users/20111956/ironman/1784) - 2018
+  - [[iT邦] 勇者鬥Vue龍 - Peter Chen](https://ithelp.ithome.com.tw/users/20107789/ironman/1710) - 2018
   - [[iT邦] 前端新手筆記-Vue.js - chunwen](https://ithelp.ithome.com.tw/users/20114645/ironman/2811) - 2019
   - [[iT邦] 技術在走，Vue.js 要有 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/2614) - 2019
   - [[iT邦] 學習 vue 30天 - sunbu](https://ithelp.ithome.com.tw/users/20109609/ironman/2233) - 2019
+  - [[iT邦] VueJS 從前端到後端 - 閃光洽](https://ithelp.ithome.com.tw/users/20001433/ironman/2154) - 2019
 
 #### 小技巧
   - ##### 父子關係
@@ -37,3 +46,7 @@ tags: [Vue2, 框架]
 
 #### Vue Router
   - [[官方] - Vue Router](https://router.vuejs.org/zh/)
+
+#### Vue套件
+  - [[iT邦] 其他現成UI - Ralph](https://ithelp.ithome.com.tw/articles/10188743) - 2017
+
