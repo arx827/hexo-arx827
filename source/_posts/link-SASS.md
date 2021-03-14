@@ -1,7 +1,7 @@
 ---
 title: '[link]_SASS/SCSS'
 date: 2021-02-16 22:58:53
-tags: [SASS/SCSS]
+tags: [SASS/SCSS, link]
 ---
 
 #### 入門

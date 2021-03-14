@@ -1,7 +1,7 @@
 ---
 title: '[link]_前端技術彙整'
 date: 2021-02-11 03:00:56
-tags: [前端技術彙整]
+tags: [前端技術彙整, link]
 ---
 #### 從零開始
   - [新手前端日記 - chibc](https://ithelp.ithome.com.tw/users/20060646/ironman/477) - 2012

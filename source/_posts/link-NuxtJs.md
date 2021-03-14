@@ -1,7 +1,7 @@
 ---
 title: '[link]_NuxtJs'
 date: 2021-02-11 03:50:05
-tags: [Vue, Nuxt]
+tags: [Vue, Nuxt, link]
 ---
 
 #### 入門

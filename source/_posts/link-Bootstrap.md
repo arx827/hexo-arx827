@@ -1,7 +1,7 @@
 ---
 title: '[link]_Bootstrap'
 date: 2021-02-14 03:55:59
-tags: [Bootstrap]
+tags: [Bootstrap, link]
 ---
 
 #### BS4

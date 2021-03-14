@@ -1,7 +1,7 @@
 ---
 title: '[link]_web-browser'
 date: 2021-02-16 23:17:34
-tags: [web-browser]
+tags: [web-browser, link]
 ---
 
 #### 瀏覽器渲染

@@ -1,7 +1,7 @@
 ---
 title: '[link]_TypeScript'
 date: 2021-02-14 04:00:26
-tags: [TypeScript]
+tags: [TypeScript, link]
 ---
 
 #### 入門

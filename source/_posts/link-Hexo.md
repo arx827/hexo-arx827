@@ -1,6 +1,6 @@
 ---
 title: '[link]_Hexo'
-tags: [Hexo]
+tags: [Hexo, link]
 # categories: []
 date: 2021-02-11 04:03:00
 ---

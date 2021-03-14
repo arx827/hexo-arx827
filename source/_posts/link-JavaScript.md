@@ -1,6 +1,6 @@
 ---
 title: '[link]_JavaScript'
-tags: [JavaScript]
+tags: [JavaScript, link]
 date: 2021-02-14 02:06:53
 ---
 
