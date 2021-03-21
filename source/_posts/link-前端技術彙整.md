@@ -11,6 +11,7 @@ tags: [前端技術彙整, link]
   - [[Youtube] 金魚都能懂的網頁設計入門 - CSScoke](https://www.youtube.com/playlist?list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre) - 2018
   - [[iT邦] 前端新手進化史 - yachen](https://ithelp.ithome.com.tw/users/20120740/ironman/2632) - 2019
   - [紮實的網頁前端學習路線與資源推薦 - Huli](https://blog.huli.tw/2019/08/21/real-front-end-learning-path/) - 2019
+  - [【轉職前端工程師】無經驗沒關係！給初學者的前端基本介紹 - CakeResume](https://www.cakeresume.com/resources/career-change-frontend-engineers.amp?locale=zh-TW) - 2020
 
 <!-- more -->
 
@@ -35,13 +36,17 @@ tags: [前端技術彙整, link]
   
 #### 效能優化
   - [今晚，我想來點 Web 前端效能優化大補帖！ - Medium](https://medium.com/starbugs/%E4%BB%8A%E6%99%9A-%E6%88%91%E6%83%B3%E4%BE%86%E9%BB%9E-web-%E5%89%8D%E7%AB%AF%E6%95%88%E8%83%BD%E5%84%AA%E5%8C%96%E5%A4%A7%E8%A3%9C%E5%B8%96-e1a5805c1ca2) - 2020
+  - [[前端效能優化] 前端效能 優化的 目的 與 重要性 - ZHI-WEI](http://skyroxas.tw/%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96-%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96%e7%9a%84%e7%9b%ae%e7%9a%84%e8%88%87%e9%87%8d%e8%a6%81%e6%80%a7/) - 2017
 
 #### 關注未來
+  - [2020 年你應該知道的8 種前端JavaScript 趨勢和工具 - alphacamp](https://www.infoq.cn/article/VdJX0JkmSm_dkJBgF23r) - 2019
   - [2020年讓人難以置信的50款前端新工具：JavaScript插件篇（一） - 前端達人](https://twgreatdaily.com/Ab5UHHABgx9BqZZIPEa_.html) - 2020
   - [2020年讓人難以置信的50款前端新工具：CSS & HTML 工具篇（二） - 前端達人](https://blog.csdn.net/Ed7zgeE9X/article/details/104306013) - 2020
   - [2020年 全端技能樹 - alphacamp](https://tw.alphacamp.co/blog/javascript-full-stack-developer-journey-and-skilltree?utm_source=facebook&utm_medium=paidsocial&utm_campaign=Rem-SiteVisitors&utm_term=Rem&utm_content=blog-skilltree-v2) - 2020
 
 #### 其他
-  - [搞懂網頁技術名詞：MVC、SPA、SSR、AMP 及 PWA - Ray C](https://vocus.cc/@raychang/5d4d8d31fd89780001faf03c) - 2019
-  - [MPA 與 SPA - Leo](https://ithelp.ithome.com.tw/articles/10202427) - 2018
+  - [[iT邦]DevOps CI 從入門到入坑 - Miles](https://ithelp.ithome.com.tw/users/20102562/ironman/987?page=1) - 2016
   - [[iT邦] PWA - iamya](https://ithelp.ithome.com.tw/users/20071512/ironman/1222) - 2016
+  - [MPA 與 SPA - Leo](https://ithelp.ithome.com.tw/articles/10202427) - 2018
+  - [搞懂網頁技術名詞：MVC、SPA、SSR、AMP 及 PWA - Ray C](https://vocus.cc/@raychang/5d4d8d31fd89780001faf03c) - 2019
+  - [饅頭計畫第零彈 — 不管你是前端、後端，兇狠的變強吧 | 成果分享 - Luka Huang](https://lukajojo.medium.com/%E4%B8%8D%E7%AE%A1%E4%BD%A0%E6%98%AF%E5%89%8D%E7%AB%AF-%E5%BE%8C%E7%AB%AF-%E5%85%87%E7%8B%A0%E7%9A%84%E8%AE%8A%E5%BC%B7%E5%90%A7-%E9%A5%85%E9%A0%AD%E8%A8%88%E7%95%AB%E7%AC%AC%E9%9B%B6%E6%9C%9F-%E6%88%90%E6%9E%9C%E5%88%86%E4%BA%AB-81918be92ca4) - 2019

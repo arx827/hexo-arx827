@@ -1,7 +1,7 @@
 ---
 title: '[link]_Vue2'
 date: 2021-02-11 01:25:59
-tags: [Vue2, 框架, link]
+tags: [Vue, 框架, link]
 # categories: vue
 ---
 
@@ -18,6 +18,7 @@ tags: [Vue2, 框架, link]
     - [Re Vue 重頭說起 第三季](https://www.youtube.com/playlist?list=PLEfh-m_KG4dbIlLGrUsF-cQW-mNPNwf1O) - 2020
 
 <!-- more -->
+
 #### 入門
   - [[iT邦] Vue.js 30天 - Ralph](https://ithelp.ithome.com.tw/users/20103424/ironman/1049) - 2016
   - [[iT邦] 網頁設計靠 Vue.js 轉前端 - adam747](https://ithelp.ithome.com.tw/users/20111956/ironman/1784) - 2018
@@ -36,17 +37,3 @@ tags: [Vue2, 框架, link]
 
 #### 設定
   - [vue.js 改變分隔符的符號](https://yiyingloveart.blogspot.com/2016/06/vuejs-change-custom-delimiters.html?m=1) - 2016
-
-#### Cli3
-  - [Vue Cli3 MPA 多页面配置 - 掘金](https://juejin.cn/post/6844903919911436296) - 2019
-
-#### Vuex
-  - [[官方] - Vuex](https://vuex.vuejs.org/zh/)
-  - [Vuex 是什麼? 怎麼用? - Medium](https://medium.com/itsems-frontend/vue-vuex1-state-mutations-364163b3acac) - 2020
-
-#### Vue Router
-  - [[官方] - Vue Router](https://router.vuejs.org/zh/)
-
-#### Vue套件
-  - [[iT邦] 其他現成UI - Ralph](https://ithelp.ithome.com.tw/articles/10188743) - 2017
-
