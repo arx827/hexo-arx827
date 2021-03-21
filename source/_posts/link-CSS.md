@@ -23,6 +23,7 @@ date: 2021-02-14 01:53:00
   - ##### CSS選取器
     - [[iT邦] 金魚都能懂的 CSS 選取器 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2799) - 2019
   - ##### CSS模組化(設計模式)
+    - [[PPT]漫談 CSS 架構方法 - 以 OOCSS, SMACSS, BEM 為例 - Kuro Hsu](https://www.slideshare.net/kurotanshi/css-oocss-smacss-bem) - 2014
     - [OOCSS、SMACSS、BEM、CSS Modules、CSS in JS - Summer。桑莫。夏天](https://cythilya.github.io/2018/06/05/css-methodologies/) - 2018
     - [BEM，CSS 設計模式 - 竹白記事本](https://chupainotebook.blogspot.com/2019/05/bemcss.html?m=1) - 2019
   - ##### CSS變數
