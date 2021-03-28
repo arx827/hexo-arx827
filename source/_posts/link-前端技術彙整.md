@@ -39,7 +39,9 @@ tags: [前端技術彙整, link]
   - [[前端效能優化] 前端效能 優化的 目的 與 重要性 - ZHI-WEI](http://skyroxas.tw/%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96-%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96%e7%9a%84%e7%9b%ae%e7%9a%84%e8%88%87%e9%87%8d%e8%a6%81%e6%80%a7/) - 2017
 
 #### 關注未來
-  - [2020 年你應該知道的8 種前端JavaScript 趨勢和工具 - alphacamp](https://www.infoq.cn/article/VdJX0JkmSm_dkJBgF23r) - 2019
+  - [前端開發，2019年往這個方向走，最新技術棧公布，國外大牛總結 - 每日頭條](https://kknews.cc/code/l4moaez.amp) - 2018
+  - [從2019看2020前端發展趨勢 - 程式前沿](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/712917/) - 2019
+  - [2020年你應該知道的8 種前端JavaScript 趨勢和工具 - alphacamp](https://www.infoq.cn/article/VdJX0JkmSm_dkJBgF23r) - 2019
   - [2020年讓人難以置信的50款前端新工具：JavaScript插件篇（一） - 前端達人](https://twgreatdaily.com/Ab5UHHABgx9BqZZIPEa_.html) - 2020
   - [2020年讓人難以置信的50款前端新工具：CSS & HTML 工具篇（二） - 前端達人](https://blog.csdn.net/Ed7zgeE9X/article/details/104306013) - 2020
   - [2020年 全端技能樹 - alphacamp](https://tw.alphacamp.co/blog/javascript-full-stack-developer-journey-and-skilltree?utm_source=facebook&utm_medium=paidsocial&utm_campaign=Rem-SiteVisitors&utm_term=Rem&utm_content=blog-skilltree-v2) - 2020
@@ -50,3 +52,5 @@ tags: [前端技術彙整, link]
   - [MPA 與 SPA - Leo](https://ithelp.ithome.com.tw/articles/10202427) - 2018
   - [搞懂網頁技術名詞：MVC、SPA、SSR、AMP 及 PWA - Ray C](https://vocus.cc/@raychang/5d4d8d31fd89780001faf03c) - 2019
   - [饅頭計畫第零彈 — 不管你是前端、後端，兇狠的變強吧 | 成果分享 - Luka Huang](https://lukajojo.medium.com/%E4%B8%8D%E7%AE%A1%E4%BD%A0%E6%98%AF%E5%89%8D%E7%AB%AF-%E5%BE%8C%E7%AB%AF-%E5%85%87%E7%8B%A0%E7%9A%84%E8%AE%8A%E5%BC%B7%E5%90%A7-%E9%A5%85%E9%A0%AD%E8%A8%88%E7%95%AB%E7%AC%AC%E9%9B%B6%E6%9C%9F-%E6%88%90%E6%9E%9C%E5%88%86%E4%BA%AB-81918be92ca4) - 2019
+  - [好用前端資源包－HTML、CSS、JS一網打盡 - HiSKIO](https://blog.hiskio.com/%E5%A5%BD%E7%94%A8%E5%89%8D%E7%AB%AF%E8%B3%87%E6%BA%90%E5%8C%85%EF%BC%8Dhtml%E3%80%81css%E3%80%81js%E4%B8%80%E7%B6%B2%E6%89%93%E7%9B%A1/) - 2019
+  - [推薦8個好用的前端小工具，Web前端程式設計師居家必備良品！ - 每日頭條](https://kknews.cc/code/pl4mrye.amp) - 2019

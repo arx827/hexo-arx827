@@ -11,6 +11,7 @@ tags: [Node, NPM, 管理工具, link]
 
 #### NVM
   - [Mac下的NVM - HappyCoder 的填坑筆記](https://sasacode.wordpress.com/)
+  - [nvm：安裝、切換不同 Node.js 版本的管理器 - Titangene Blog](https://titangene.github.io/article/nvm.html) - 2020
 
 #### NPM
   - [NPM系列 - 從手動到自動 - PJCHENder](https://pjchender.blogspot.com/p/blog-page.html) 

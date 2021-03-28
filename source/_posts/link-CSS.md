@@ -28,6 +28,8 @@ date: 2021-02-14 01:53:00
     - [BEM，CSS 設計模式 - 竹白記事本](https://chupainotebook.blogspot.com/2019/05/bemcss.html?m=1) - 2019
   - ##### CSS變數
     - [原生 CSS 變數運用技巧 - W3HexSchool](https://w3c.hexschool.com/blog/21985acb) - 2019
+    - [自定義變數帶你隨心所欲，一鍵換膚 - MdEditor](https://www.mdeditor.tw/pl/2AUE/zh-tw) - 2019
+    - [CSS 自定義屬性的策略指南 - ITREAD01](https://www.itread01.com/content/1550553325.html) - 2019
   - ##### CSS權重
     - [小事之 CSS 權重 (css specificity) - 小艾iris](https://ithelp.ithome.com.tw/articles/10196454) - 2018
   - ##### 垂直置中
