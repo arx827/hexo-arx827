@@ -54,6 +54,14 @@ date: 2021-02-14 01:53:00
     - [[iT邦] 番外篇 - 胡搞 box-shadow (上) - yachen](https://ithelp.ithome.com.tw/articles/10220112)
     - [[iT邦] 番外篇 - 胡搞 box-shadow (中) - yachen](https://ithelp.ithome.com.tw/articles/10220686)
     - [[iT邦] 番外篇 - 胡搞 box-shadow (下) - yachen](https://ithelp.ithome.com.tw/articles/10221008)
+  - ##### calc
+    - [calc 結合變數，從 CSS、SCSS 喇到 Styled Components - Robby](https://dotblogs.com.tw/explooosion/2020/06/05/001534) - 2020
+
+#### Animation
+  - [CSS animation 設定 - Mozilla](https://developer.mozilla.org/zh-TW/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+
+#### npm 套件
+  - [Animate.css](https://animate.style/)
 
 #### 其他議題
   - ##### Collapsing margins

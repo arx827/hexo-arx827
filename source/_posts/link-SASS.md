@@ -15,7 +15,10 @@ tags: [SASS/SCSS, link]
   - [Sass map get - 卡斯伯](https://wcc723.github.io/sass/2015/02/11/sass-map-get/) - 2015
 
 #### Animation
-  - [利用 SCSS 更方便的使用 CSS Animation - Jay](https://happyjayxin.medium.com/%E5%88%A9%E7%94%A8-scss-%E6%9B%B4%E7%B0%A1%E6%BD%94%E7%9A%84%E4%BD%BF%E7%94%A8-css-animation-f0717a958a69) - 2019
+  - [[iT邦]Sass教學 (26) - 使用animate.scss增強網頁瀏覽體驗 - 廖洧杰](https://ithelp.ithome.com.tw/articles/10159400) - 2014
+  - [利用 SCSS 更方便的使用 CSS Animation - Medium](https://happyjayxin.medium.com/%E5%88%A9%E7%94%A8-scss-%E6%9B%B4%E7%B0%A1%E6%BD%94%E7%9A%84%E4%BD%BF%E7%94%A8-css-animation-f0717a958a69) - 2019
+  - [loading動態圖 - CSS-Tricks](https://css-tricks.com/repeatable-staggered-animation-three-ways-sass-gsap-web-animations-api/) - 2020
+  - [animate-sass - Github](https://github.com/tgdev/animate-sass)
 
 #### 其他議題
   - [HSL function - 卡斯伯](https://wcc723.github.io/sass/2013/08/26/sass-hsl-funtion/) - 2013

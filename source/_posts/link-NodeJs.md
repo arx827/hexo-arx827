@@ -19,4 +19,5 @@ tags: [Node, NPM, 管理工具, link]
   - [npm模塊管理器 - 阮一峰](https://javascript.ruanyifeng.com/nodejs/npm.html) 
   - [從零開始: 使用NPM套件 - medium](https://medium.com/html-test/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B-%E4%BD%BF%E7%94%A8npm%E5%A5%97%E4%BB%B6-317beefdf182) - 2017
   - [NPM 使用介绍 - Runoob](https://www.runoob.com/nodejs/nodejs-npm.html)
+  - [CLI命令 - 雲社區](https://cloud.tencent.com/developer/chapter/18114)
   

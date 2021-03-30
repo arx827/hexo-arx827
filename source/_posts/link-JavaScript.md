@@ -31,6 +31,8 @@ date: 2021-02-14 02:06:53
     - [你懂 JavaScript 嗎？#15 閉包（Closure） - Summer。桑莫。夏天](https://cythilya.github.io/2018/10/22/closure/) - 2018
     - [所有的函式都是閉包：談 JS 中的作用域與 Closure - TechBridge 技術共筆部落格](https://blog.techbridge.cc/2018/12/08/javascript-closure/) - 2018
     - [閉包 - WangDoc](https://wangdoc.com/javascript/types/function.html#%E9%97%AD%E5%8C%85)
+  - ##### Proxy
+    - [一起來了解 Javascript 中的 Proxy 與 Reflect - TechBridge 技術共筆部落格](https://blog.techbridge.cc/2018/05/27/js-proxy-reflect/) - 2018
 
 #### 其他議題
   - [拖曳時，禁止觸發點擊事件的三種方法 - CSDN](https://blog.csdn.net/dKnightL/article/details/89517010) - 2019

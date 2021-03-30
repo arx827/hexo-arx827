@@ -25,6 +25,8 @@ tags: [前端技術彙整, link]
   - [[medium] sexyoung](https://medium.com/@sexyoung1985)
   - [[Youtube] 網站開發直播主題集合 - Alex 宅幹嘛](https://www.youtube.com/playlist?list=PLEfh-m_KG4dZcmTWAHWDgiLhkFAQh-xpA) - 2018
   - [[blog] 搞搞就懂 - CHRIS CHEN](https://dotblogs.com.tw/wasichris)
+  - [[blog] 雲社區](https://cloud.tencent.com/developer/devdocs)
+  - [[iT邦] 廖洧杰](https://ithelp.ithome.com.tw/users/20040221/ironman)
 
 #### 切版
   - [[iT邦] 金魚都能懂的網頁切版 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2623) - 2019
@@ -36,15 +38,18 @@ tags: [前端技術彙整, link]
   
 #### 效能優化
   - [今晚，我想來點 Web 前端效能優化大補帖！ - Medium](https://medium.com/starbugs/%E4%BB%8A%E6%99%9A-%E6%88%91%E6%83%B3%E4%BE%86%E9%BB%9E-web-%E5%89%8D%E7%AB%AF%E6%95%88%E8%83%BD%E5%84%AA%E5%8C%96%E5%A4%A7%E8%A3%9C%E5%B8%96-e1a5805c1ca2) - 2020
+  - [【翻譯】高效能網站應用程式 - Medium](https://wyattkidd.medium.com/%E9%AB%98%E6%95%88%E8%83%BD%E7%B6%B2%E7%AB%99%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-f7b7b9499b2e) - 2020
   - [[前端效能優化] 前端效能 優化的 目的 與 重要性 - ZHI-WEI](http://skyroxas.tw/%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96-%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96%e7%9a%84%e7%9b%ae%e7%9a%84%e8%88%87%e9%87%8d%e8%a6%81%e6%80%a7/) - 2017
 
 #### 關注未來
   - [前端開發，2019年往這個方向走，最新技術棧公布，國外大牛總結 - 每日頭條](https://kknews.cc/code/l4moaez.amp) - 2018
+  - [2019 - Web開發技術指南和趨勢 - 知乎](https://zhuanlan.zhihu.com/p/53043557) - 2019
   - [從2019看2020前端發展趨勢 - 程式前沿](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/712917/) - 2019
   - [2020年你應該知道的8 種前端JavaScript 趨勢和工具 - alphacamp](https://www.infoq.cn/article/VdJX0JkmSm_dkJBgF23r) - 2019
   - [2020年讓人難以置信的50款前端新工具：JavaScript插件篇（一） - 前端達人](https://twgreatdaily.com/Ab5UHHABgx9BqZZIPEa_.html) - 2020
   - [2020年讓人難以置信的50款前端新工具：CSS & HTML 工具篇（二） - 前端達人](https://blog.csdn.net/Ed7zgeE9X/article/details/104306013) - 2020
   - [2020年 全端技能樹 - alphacamp](https://tw.alphacamp.co/blog/javascript-full-stack-developer-journey-and-skilltree?utm_source=facebook&utm_medium=paidsocial&utm_campaign=Rem-SiteVisitors&utm_term=Rem&utm_content=blog-skilltree-v2) - 2020
+  - [你值得擁有的 11 個前端開發利器 - 每日頭條](https://kknews.cc/code/254438r.amp) - 2020
 
 #### 其他
   - [[iT邦]DevOps CI 從入門到入坑 - Miles](https://ithelp.ithome.com.tw/users/20102562/ironman/987?page=1) - 2016
