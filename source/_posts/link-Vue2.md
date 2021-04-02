@@ -29,10 +29,8 @@ tags: [Vue, 框架, link]
   - [[iT邦] VueJS 從前端到後端 - 閃光洽](https://ithelp.ithome.com.tw/users/20001433/ironman/2154) - 2019
 
 #### 小技巧
-  - ##### 父子關係
-    - [父元件呼叫子元件方法及事件 - 程式前沿](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/204272/) - 2018
-  - ##### 部署Github
-    - [將Vue專案部署至Github Pages - Medium](https://dean34520.medium.com/vue%E7%B3%BB%E5%88%97%E6%96%87-%E5%B0%87vue%E6%AA%94%E6%A1%88%E9%83%A8%E7%BD%B2%E8%87%B3github-334951cadede) - 2019
+  
+  
   - [/deep/ 是什麼？ — 聊聊 Vue 裡的 scoped css - Medium](https://medium.com/@debbyji/deep-%E6%98%AF%E4%BB%80%E9%BA%BC-%E8%81%8A%E8%81%8A-vue-%E8%A3%A1%E7%9A%84-scoped-css-d1877f902845) - 2020
 
 #### 設定

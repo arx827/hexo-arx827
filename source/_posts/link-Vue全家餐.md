@@ -27,3 +27,9 @@ tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
 
 #### Vuetify
   - [Vuetify - 官方教學文件](https://vuetifyjs.com/zh-Hans/introduction/why-vuetify/)
+
+#### 小技巧
+  - ##### 父子關係
+    - [父元件呼叫子元件方法及事件 - 程式前沿](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/204272/) - 2018
+  - ##### 部署Github
+    - [將Vue專案部署至Github Pages - Medium](https://dean34520.medium.com/vue%E7%B3%BB%E5%88%97%E6%96%87-%E5%B0%87vue%E6%AA%94%E6%A1%88%E9%83%A8%E7%BD%B2%E8%87%B3github-334951cadede) - 2019
