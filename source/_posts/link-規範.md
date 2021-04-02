@@ -16,3 +16,6 @@ tags: [規範, CSS, JavaScript, link]
   - [if我是前端團隊Leader，怎麼制定前端協作規範? - 程式前沿](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/642504/) - 2019
   - [前端團隊代碼風格統一規範實踐 - 程式前沿](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/738497/) - 2020
   - [Airbnb JavaScript 編碼風格指南（2018年最新版） - 程式前沿](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/29402/) - 2018
+
+#### 設定
+  - [[Vue] 整合 Vue style guide, eslint-plugin-vue 和 VSCode - Pjchender](https://pjchender.blogspot.com/2019/07/vue-vue-style-guide-eslint-plugin-vue.html?m=1) - 2019

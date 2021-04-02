@@ -6,3 +6,9 @@ tags: [Webpack, 管理工具, link]
 
 #### 入門
   - [[iT邦] 尋覓 webpack - 藉由 webpack 學習網頁前端工程的精妙之處 - Peter Chen](https://ithelp.ithome.com.tw/users/20107789/ironman/3332) - 2020
+  - [v4.0教程 - 官方](https://webpack.docschina.org/concepts/)
+  - [Webpack基本配置 - 前端九部](https://www.yuque.com/fe9/basic/fnvdeu)
+
+<!-- more -->
+#### 環境建置
+  - [手動建置一個Webpack-Vue的開發環境 - Devs.tw](https://devs.tw/post/60) - 2018

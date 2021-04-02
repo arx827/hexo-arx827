@@ -14,10 +14,14 @@ date: 2021-02-14 02:06:53
   - [[Youtube] 深入淺出 Javascript30 快速導覽 - Alex 宅幹嘛](https://www.youtube.com/playlist?list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq) - 2020
   - ##### ES6
     - [ECMAScript 6 入門 - 阮一峰](https://es6.ruanyifeng.com/)
+    - [Classes - Mozilla](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes)
+    - [建構子 - Mozilla](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Classes/constructor)
 
 <!-- more -->
 
 #### 基礎
+  - [上手使用 JavaScript 的 Map、Reduce 吧！ - Fred chien](https://fred-zone.blogspot.com/2017/01/javascript-mapreduce.html?m=1) - 2017
+  - [都 2017 年了，學學用原生 JS 來操作 DOM 吧 - Jimmy](https://jmln.tw/blog/2017-07-07-vanilla-javascript-dom-manipulation.html) - 2017
   - ##### 編程風格
     - [編程風格 - 阮一峰](https://es6.ruanyifeng.com/#docs/style)
   - ##### console
@@ -43,6 +47,8 @@ date: 2021-02-14 02:06:53
   - [JS 冷知識: 你所不知道的 void - Kuro](https://kuro.tw/posts/2019/08/04/JS-%E5%86%B7%E7%9F%A5%E8%AD%98-%E4%BD%A0%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-void/) - 2019
   - [網頁的生命週期 - Kuro](https://ithelp.ithome.com.tw/articles/10197335) - 2018
   - [[筆記] 了解JavaScript中原型(prototype)、原型鍊（prototype chain）和繼承(inheritance)的概念 - PJCHENder](https://pjchender.blogspot.com/2016/06/javascriptprototypeprototype.html) - 2016
+  - [詳解JavaScript型別判斷的四種方法 - 程式人生](https://www.796t.com/article.php?id=137003) - 2020
+  - [你知道JavaScript其實是單線程嗎 ? - Steve chu](https://hooty868.medium.com/%E4%BD%A0%E7%9F%A5%E9%81%93javascript%E5%85%B6%E5%AF%A6%E6%98%AF%E5%96%AE%E7%B7%9A%E7%A8%8B%E5%97%8E-8eb6fce68920) - 2020
 
 #### 第三方套件
   - [Rallax.js - 滾動視差效果](https://chriscavs.github.io/rallax-demo/)

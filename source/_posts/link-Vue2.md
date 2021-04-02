@@ -27,6 +27,9 @@ tags: [Vue, 框架, link]
   - [[iT邦] 技術在走，Vue.js 要有 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/2614) - 2019
   - [[iT邦] 學習 vue 30天 - sunbu](https://ithelp.ithome.com.tw/users/20109609/ironman/2233) - 2019
   - [[iT邦] VueJS 從前端到後端 - 閃光洽](https://ithelp.ithome.com.tw/users/20001433/ironman/2154) - 2019
+  #### 學習教程
+  - [Vue2學習教程 - 官方](https://cn.vuejs.org/v2/guide/)
+  - [測試學習教程 - 官方](https://cn.vuejs.org/v2/guide/testing.html)
 
 #### 小技巧
   

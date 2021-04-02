@@ -20,3 +20,6 @@ date: 2021-02-11 04:03:00
   - [[melody] - github](https://github.com/Molunerfinn/hexo-theme-melody)
   - [[melody] - demo](https://molunerfinn.com/)
   - [[next] - github](https://github.com/theme-next/hexo-theme-next)
+
+#### 託管
+  - [使用Hexo+Firebase搭建平台托管的静态博客 - Decouple](https://hyrepo.com/tech/hexo-firebase-blog/) - 2018

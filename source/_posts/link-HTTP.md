@@ -10,4 +10,4 @@ tags: [HTTP, link]
 
 <!-- more -->
 #### 跨源資源共享 (CORS)
-  - [CORS - MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
+  - [CORS - MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)

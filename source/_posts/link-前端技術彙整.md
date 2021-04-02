@@ -11,7 +11,7 @@ tags: [前端技術彙整, link]
   - [在開始寫Code之前？ - Medium](https://medium.com/i-am-mike/%E5%9C%A8%E9%96%8B%E5%A7%8B%E5%AF%ABcode%E5%89%8D%E7%9A%84%E9%81%B8%E6%93%87-662b3a2debe8) - 2018
   - [[Youtube] 金魚都能懂的網頁設計入門 - CSScoke](https://www.youtube.com/playlist?list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre) - 2018
   - [[iT邦] 前端新手進化史 - yachen](https://ithelp.ithome.com.tw/users/20120740/ironman/2632) - 2019
-  - [紮實的網頁前端學習路線與資源推薦 - Huli](https://blog.huli.tw/2019/08/21/real-front-end-learning-path/) - 2019
+  - [紮實的網頁前端學習路線與資源推薦 - Medium](https://hulitw.medium.com/front-end-learning-path-55201571ecfe) - 2019
   - [【轉職前端工程師】無經驗沒關係！給初學者的前端基本介紹 - CakeResume](https://www.cakeresume.com/resources/career-change-frontend-engineers.amp?locale=zh-TW) - 2020
 
 <!-- more -->
@@ -28,6 +28,7 @@ tags: [前端技術彙整, link]
   - [[blog] 搞搞就懂 - CHRIS CHEN](https://dotblogs.com.tw/wasichris)
   - [[blog] 雲社區](https://cloud.tencent.com/developer/devdocs)
   - [[iT邦] 廖洧杰](https://ithelp.ithome.com.tw/users/20040221/ironman)
+  - [[iT邦] 若虛](https://ithelp.ithome.com.tw/users/20103676/ironman/)
 
 #### 切版
   - [[iT邦] 金魚都能懂的網頁切版 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2623) - 2019

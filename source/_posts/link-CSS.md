@@ -27,6 +27,7 @@ date: 2021-02-14 01:53:00
     - [OOCSS、SMACSS、BEM、CSS Modules、CSS in JS - Summer。桑莫。夏天](https://cythilya.github.io/2018/06/05/css-methodologies/) - 2018
     - [BEM，CSS 設計模式 - 竹白記事本](https://chupainotebook.blogspot.com/2019/05/bemcss.html?m=1) - 2019
   - ##### CSS變數
+    - [CSS變數實用指南及注意事項 - ITREAD01](https://www.itread01.com/content/1541942662.html) - 2018
     - [原生 CSS 變數運用技巧 - W3HexSchool](https://w3c.hexschool.com/blog/21985acb) - 2019
     - [自定義變數帶你隨心所欲，一鍵換膚 - MdEditor](https://www.mdeditor.tw/pl/2AUE/zh-tw) - 2019
     - [CSS 自定義屬性的策略指南 - ITREAD01](https://www.itread01.com/content/1550553325.html) - 2019
