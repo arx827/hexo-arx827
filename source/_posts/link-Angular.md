@@ -6,6 +6,7 @@ tags: [Angular, 框架, link]
 
 #### 入門
   - [[iT邦] Angular 深入淺出三十天 - Leo](https://ithelp.ithome.com.tw/users/20090728/ironman/1600) - 2018
+  - [[iT邦] 入門AngularJS筆記與前端領域的學習筆記分享 - iamya](https://ithelp.ithome.com.tw/users/20071512/ironman/695) - 2013
 
 <!-- more -->
 
