@@ -4,6 +4,12 @@ date: 2021-03-22 00:45:07
 tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
 ---
 
+#### Vue 源碼探索
+  - [Vue2技術揭秘](https://ustbhuangyi.github.io/vue-analysis/v2/prepare/)
+  - [Vue3技術揭秘](https://ustbhuangyi.github.io/vue-analysis/v3/new/)
+
+<!-- more -->
+
 #### Cli
   - [Vue Cli3 MPA 多页面配置 - 掘金](https://juejin.cn/post/6844903919911436296) - 2019
   - [Vue Cli學習教程 - 官方](https://cli.vuejs.org/zh/guide/)
@@ -14,14 +20,12 @@ tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
   - [chainWebpack與configureWebpack](https://forum.vuejs.org/t/chainwebpack-configurewebpack/68750)
   - [前端工程化：webpack-chain - 掘金](https://juejin.cn/post/6844904138954801166) - 2020
   - [configureWebpack、chainWebpack配置vue.config.js - CSDN](https://blog.csdn.net/weixin_43443341/article/details/108865372) - 2020
+  - [Vue CLI 源碼探索 - 掘金](https://juejin.cn/post/6844904154360446983) - 2020
 
   - ##### 多頁
     - [Vue-CLI 製作 SPA 很方便，那需要多頁面的時候呢？ - Medium](https://medium.com/@nchuuu/%E5%88%A9%E7%94%A8vue-cli-%E9%80%B2%E8%A1%8C%E5%A4%9A%E9%A0%81%E6%89%93%E5%8C%85-633b39bb157) - 2019
     - [vue-multi-page-demo - Github](https://github.com/liuyunzhuge/vue-multi-page-demo) - 2019
     - [如何使用vue-cli4构建一个多页应用 - 流云诸葛](https://blog.liuyunzhuge.com/2019/12/21/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vue-cli4%E6%9E%84%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/) - 2019
-    
-
-<!-- more -->
 
 #### Vue Loader
   - [Vue 單文件組件(SFC) 規範 - 官方](https://vue-loader.vuejs.org/zh/spec.html)
@@ -33,6 +37,9 @@ tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
 
 #### Vue Router
   - [[官方] - Vue Router](https://router.vuejs.org/zh/)
+  - [使用vue-router+vuex進行導航守衛 - 簡書](https://www.jianshu.com/p/f920b0e994dc) - 2018
+  - [vue-router導航守衛，不懂的來 - 知乎](https://zhuanlan.zhihu.com/p/54112006) - 2019
+  - [Vue Router 導航守衛 - JC2182](https://zhuanlan.zhihu.com/p/54112006)
 
 #### Vue套件
   - [[iT邦] 其他現成UI - Ralph](https://ithelp.ithome.com.tw/articles/10188743) - 2017
@@ -70,9 +77,28 @@ tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
   - [Vue.js Examples - 總匯](https://vuejsexamples.com/)
   - [實用的vue插件大匯總，趕緊收藏起來 - 每日頭條](https://kknews.cc/code/kbejqlb.html) - 2018
 
+  - ##### 虛擬滾動
+    - [vue-virtual-scroll-list - Github](https://github.com/tangbc/vue-virtual-scroll-list) - 2019
+    - [vue-virtual-scroller - Github](https://github.com/Akryum/vue-virtual-scroller) - 2020
+  - ##### 格式化時間
+    - [vue+moment.js使用 - segmentfault](https://segmentfault.com/a/1190000021200938) - 2019
+    - [vue中使用Moment.js - CSDN](https://blog.csdn.net/lihefei_coder/article/details/92628030) - 2019
+
+
 #### Blog 參考
   - [vue-blog - Github](https://github.com/uncleLian/vue-blog) - 2019
   - [vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%8A%9F%E8%83%BD)
 
+#### API
+  - [如何在 Vue-CLI 建立的開發環境呼叫跨域遠端 RESTful APIs - Kuro's Blog](https://kuro.tw/posts/2017/06/07/%E5%A6%82%E4%BD%95%E5%9C%A8-Vue-CLI-%E5%BB%BA%E7%AB%8B%E7%9A%84%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E5%91%BC%E5%8F%AB%E8%B7%A8%E5%9F%9F%E9%81%A0%E7%AB%AF-RESTful-APIs/) - 2017
+  - [Vue專案中的API管理及封裝 - 企鵝也懂程式設計](https://medium.com/%E4%BC%81%E9%B5%9D%E4%B9%9F%E6%87%82%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/vue%E5%B0%88%E6%A1%88%E4%B8%AD%E7%9A%84api%E7%AE%A1%E7%90%86%E5%8F%8A%E5%B0%81%E8%A3%9D-bccb77f82f98) - 2019
+  - [Vue Axios之生產/開發環境跨域問題解決 - 知乎](https://zhuanlan.zhihu.com/p/231082156) - 2020
+
+#### 性能優化
+  - [Vue 項目性能優化— 實踐指南（網上最全/ 詳細） - 掘金](https://juejin.cn/post/6844903913410314247) - 2019
+  - [[iT邦] Vue Speed Level Up - Peter Lu](https://ithelp.ithome.com.tw/articles/10249161) - 2020
+
 #### 其他
+  - [VueJS 教學筆記: 正規表示法 - hackmd](https://hackmd.io/@FortesHuang/rJf6CYynS) - 2019
   - [Vue系列-import動態引入的坑 - IT人](https://iter01.com/536683.html) - 2020
+

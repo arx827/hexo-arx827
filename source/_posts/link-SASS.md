@@ -6,8 +6,8 @@ tags: [SASS/SCSS, link]
 
 #### 入門
   - [Sass官網](https://sass-lang.com/guide)
-  - [學習Sass，你需要更有效率的切版方式(上) - Fortes Huang](https://hackmd.io/@FortesHuang/SyKirdx78) - 2020
-  - [學習Sass，你需要更有效率的切版方式(下) - Fortes Huang](https://hackmd.io/@FortesHuang/HJPE3sCXU) - 2020
+  - [學習Sass，你需要更有效率的切版方式(上) - hackmd](https://hackmd.io/@FortesHuang/SyKirdx78) - 2020
+  - [學習Sass，你需要更有效率的切版方式(下) - hackmd](https://hackmd.io/@FortesHuang/HJPE3sCXU) - 2020
 
 <!-- more -->
 

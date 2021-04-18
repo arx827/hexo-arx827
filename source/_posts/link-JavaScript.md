@@ -37,12 +37,17 @@ date: 2021-02-14 02:06:53
     - [閉包 - WangDoc](https://wangdoc.com/javascript/types/function.html#%E9%97%AD%E5%8C%85)
   - ##### Proxy
     - [一起來了解 Javascript 中的 Proxy 與 Reflect - TechBridge 技術共筆部落格](https://blog.techbridge.cc/2018/05/27/js-proxy-reflect/) - 2018
+  - ##### 正規表達式
+  
 
 #### 其他議題
-  - [拖曳時，禁止觸發點擊事件的三種方法 - CSDN](https://blog.csdn.net/dKnightL/article/details/89517010) - 2019
   - ##### JSDoc 文檔註解
     - [Javascript文檔註解規則使用方式 @use JSDoc - ucamc](https://www.ucamc.com/e-learning/javascript/250-javascript-use-jsdoc) - 2018
+  - ##### Preload, Prefetch, Preconnect
+    - [深入淺出 Preload, Prefetch 和 Preconnect：三種加快網頁載入速度的 Resource Hint 技巧 - Shubo](https://shubo.io/preload-prefetch-preconnect/) - 2019
+    - [資源提示——什麼是Preload，Prefetch和Preconnect？ - 程式前沿](https://codertw.com/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/672381/) - 2019
 
+  - [拖曳時，禁止觸發點擊事件的三種方法 - CSDN](https://blog.csdn.net/dKnightL/article/details/89517010) - 2019
   - [使用window.onerror捕獲並報告JavaScript錯誤 - SENTRY](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror) - 2016
   - [JS 冷知識: 你所不知道的 void - Kuro](https://kuro.tw/posts/2019/08/04/JS-%E5%86%B7%E7%9F%A5%E8%AD%98-%E4%BD%A0%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-void/) - 2019
   - [網頁的生命週期 - Kuro](https://ithelp.ithome.com.tw/articles/10197335) - 2018

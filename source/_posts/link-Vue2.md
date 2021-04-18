@@ -33,8 +33,6 @@ tags: [Vue, 框架, link]
   - [測試學習教程 - 官方](https://cn.vuejs.org/v2/guide/testing.html)
 
 #### 小技巧
-  
-  
   - [/deep/ 是什麼？ — 聊聊 Vue 裡的 scoped css - Medium](https://medium.com/@debbyji/deep-%E6%98%AF%E4%BB%80%E9%BA%BC-%E8%81%8A%E8%81%8A-vue-%E8%A3%A1%E7%9A%84-scoped-css-d1877f902845) - 2020
 
 #### 設定

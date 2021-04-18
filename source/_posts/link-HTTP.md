@@ -11,3 +11,7 @@ tags: [HTTP, link]
 
 #### 跨源資源共享 (CORS)
   - [CORS - MDN Web Docs](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
+
+#### HTTP緩存機制
+  - [徹底弄懂HTTP緩存機制及原理 - bilibili](https://www.bilibili.com/read/cv3403681/)
+

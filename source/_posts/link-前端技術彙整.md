@@ -37,6 +37,7 @@ tags: [前端技術彙整, link]
   - [[iT邦] iamya](https://ithelp.ithome.com.tw/users/20071512/ironman)
 
   - [Ballaedi](https://ballaediworkshop.blogspot.com/)
+  - [W.S.Wade](https://wsw0615.medium.com/)
 
 
 #### 切版
@@ -52,6 +53,7 @@ tags: [前端技術彙整, link]
   - [今晚，我想來點 Web 前端效能優化大補帖！ - Medium](https://medium.com/starbugs/%E4%BB%8A%E6%99%9A-%E6%88%91%E6%83%B3%E4%BE%86%E9%BB%9E-web-%E5%89%8D%E7%AB%AF%E6%95%88%E8%83%BD%E5%84%AA%E5%8C%96%E5%A4%A7%E8%A3%9C%E5%B8%96-e1a5805c1ca2) - 2020
   - [【翻譯】高效能網站應用程式 - Medium](https://wyattkidd.medium.com/%E9%AB%98%E6%95%88%E8%83%BD%E7%B6%B2%E7%AB%99%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-f7b7b9499b2e) - 2020
   - [[前端效能優化] 前端效能 優化的 目的 與 重要性 - ZHI-WEI](http://skyroxas.tw/%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96-%e5%89%8d%e7%ab%af%e6%95%88%e8%83%bd%e5%84%aa%e5%8c%96%e7%9a%84%e7%9b%ae%e7%9a%84%e8%88%87%e9%87%8d%e8%a6%81%e6%80%a7/) - 2017
+  - [你不知道的「前端性能優化」知識，我都給你總結好了 - 人人焦點](https://ppfocus.com/0/di4b1b6c6.html) - 2020
 
 #### 關注未來
   - [前端開發，2019年往這個方向走，最新技術棧公布，國外大牛總結 - 每日頭條](https://kknews.cc/code/l4moaez.amp) - 2018
