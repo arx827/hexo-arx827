@@ -7,6 +7,7 @@ tags: [前端技術彙整, link]
   - [新手前端日記 - chibc](https://ithelp.ithome.com.tw/users/20060646/ironman/477) - 2012
   - [[iT邦] 視覺設計師邁向程式設計師養成計畫 - iamya](https://ithelp.ithome.com.tw/users/20071512/ironman/494) - 2012
   - [[iT邦] 前端新手村 - Chris](https://ithelp.ithome.com.tw/users/20107637/ironman/1457) - 2017
+  - [[iT邦] 重新學習網頁設計 - Cian](https://ithelp.ithome.com.tw/users/20102825/ironman/1314) - 2017
   - [[iT邦] 金魚都能懂的網頁設計入門 - CSScoke](https://ithelp.ithome.com.tw/users/20112550/ironman/2072) - 2018
   - [[iT邦] 前端菜焦阿日記 - mangoSu](https://ithelp.ithome.com.tw/users/20112158/ironman/1914) - 2018
   - [在開始寫Code之前？ - Medium](https://medium.com/i-am-mike/%E5%9C%A8%E9%96%8B%E5%A7%8B%E5%AF%ABcode%E5%89%8D%E7%9A%84%E9%81%B8%E6%93%87-662b3a2debe8) - 2018

@@ -53,6 +53,9 @@ tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
 #### Vuetify
   - [Vuetify - 官方教學文件](https://vuetifyjs.com/zh-Hans/introduction/why-vuetify/)
 
+#### Vite
+  - [是什麼導致尤大大選擇放棄Webpack？【vite 原理解析】 - 每日頭條](https://kknews.cc/code/n2mrkvg.amp)
+
 #### PreRender-spa
   - [使用 prerender-spa-plugin 預渲染單頁應用 - Roya's Blog](https://awdr74100.github.io/2020-07-13-webpack-prerenderspaplugin/) - 2020
   - [基於prerender-spa-plugin的Vue.js預渲染實踐 - MdEditor](https://www.mdeditor.tw/pl/pyyk/zh-hk) - 2020
@@ -97,6 +100,7 @@ tags: [Vue, Vue全家餐, Vue套件, Cli3, Vuex, Vue Router, NuxtJs, Vuetify]
 #### 性能優化
   - [Vue 項目性能優化— 實踐指南（網上最全/ 詳細） - 掘金](https://juejin.cn/post/6844903913410314247) - 2019
   - [[iT邦] Vue Speed Level Up - Peter Lu](https://ithelp.ithome.com.tw/articles/10249161) - 2020
+  - [面試官問Vue 性能優化，我該怎麼回答？ - 畫漫畫的程序員](https://mp.weixin.qq.com/s/6BrE36U72LD_kGX0N1jQ5Q) - 2021
 
 #### 其他
   - [VueJS 教學筆記: 正規表示法 - hackmd](https://hackmd.io/@FortesHuang/rJf6CYynS) - 2019

@@ -7,6 +7,7 @@ date: 2021-02-14 01:53:00
 
 #### 系列文章
   - [CSS系列 - PJCHENder](https://pjchender.blogspot.com/search/label/CSS)
+  - [[iT邦] 重新認識 CSS - Titangene](https://ithelp.ithome.com.tw/users/20117586/ironman/2617) - 2019
   
   - ##### 金魚系列
     - [CSS系列 - CSScoke](http://csscoke.com/)
@@ -88,3 +89,8 @@ date: 2021-02-14 01:53:00
 #### 神人膜拜區
   - [Moustached Nanny - Julia Miocene](https://codepen.io/miocene/pen/mjLPVp)、[作者 - Julia Miocene](https://codepen.io/miocene)
   - [A love for Cats - Charisse](https://codepen.io/charisseysabel/pen/adXGMe)
+
+#### 跨平台解法
+  - ##### Safari
+  - [overflow:hidden](https://stackoverflow.com/questions/3047337/does-overflowhidden-applied-to-body-work-on-iphone-safari)
+  - [Preventing body scroll for modals in iOS](https://benfrain.com/preventing-body-scroll-for-modals-in-ios/)

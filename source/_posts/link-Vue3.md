@@ -12,6 +12,7 @@ tags: [Vue, Vue3, 框架, link]
   - [「李南江」Vue3.0正式版教程 - bilibili](https://www.bilibili.com/video/BV14k4y117LL?from=search&seid=16839590488178074731) - 2020
   - [vue3-News- Github](https://github.com/vue3/vue3-News)
   - [[官方] Vue3中文文檔](https://vue3js.cn/docs/zh/)
+  - [VUE 3.0初體驗 - TW511教學網](https://tw511.com/a/01/13583.html)
 
 <!-- more -->
 

@@ -11,6 +11,7 @@ date: 2021-02-14 02:06:53
   - [ECMASCRIPT - openhome](https://openhome.cc/Gossip/ECMAScript/index.html)
   - [JavaScript 教程 - WangDoc](https://wangdoc.com/javascript/index.html)
   - [[iT邦] 重新認識 JavaScript - Kuro](https://ithelp.ithome.com.tw/users/20065504/ironman/1259) - 2018
+  - [[iT邦] 好 Js 不學嗎 !? JavaScript 入門中的入門 - Vita Ora](https://ithelp.ithome.com.tw/users/20112656/ironman/2782) - 2019
   - [[Youtube] 深入淺出 Javascript30 快速導覽 - Alex 宅幹嘛](https://www.youtube.com/playlist?list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq) - 2020
   - ##### ES6
     - [ECMAScript 6 入門 - 阮一峰](https://es6.ruanyifeng.com/)
@@ -21,7 +22,12 @@ date: 2021-02-14 02:06:53
 
 #### 基礎
   - [上手使用 JavaScript 的 Map、Reduce 吧！ - Fred chien](https://fred-zone.blogspot.com/2017/01/javascript-mapreduce.html?m=1) - 2017
-  - [都 2017 年了，學學用原生 JS 來操作 DOM 吧 - Jimmy](https://jmln.tw/blog/2017-07-07-vanilla-javascript-dom-manipulation.html) - 2017
+  
+  - ##### 物件
+    - [JavaScript 物件介紹 - mozilla](https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Objects)
+  - ##### DOM
+    - [都 2017 年了，學學用原生 JS 來操作 DOM 吧 - Jimmy](https://jmln.tw/blog/2017-07-07-vanilla-javascript-dom-manipulation.html) - 2017
+    - [學學用原生JS來操作DOM吧 - notfalse技術客](https://notfalse.net/64/js-dom-2017) - 2018
   - ##### 編程風格
     - [編程風格 - 阮一峰](https://es6.ruanyifeng.com/#docs/style)
   - ##### console
@@ -38,7 +44,7 @@ date: 2021-02-14 02:06:53
   - ##### Proxy
     - [一起來了解 Javascript 中的 Proxy 與 Reflect - TechBridge 技術共筆部落格](https://blog.techbridge.cc/2018/05/27/js-proxy-reflect/) - 2018
   - ##### 正規表達式
-  
+    - [[iT邦]JavaScript - RegExp 物件 - Vita Ora](https://ithelp.ithome.com.tw/articles/10221016) - 2019
 
 #### 其他議題
   - ##### JSDoc 文檔註解

@@ -37,3 +37,8 @@ tags: [Vue, 框架, link]
 
 #### 設定
   - [vue.js 改變分隔符的符號](https://yiyingloveart.blogspot.com/2016/06/vuejs-change-custom-delimiters.html?m=1) - 2016
+  - ##### Cookie
+    - [vue開發不同代理方式設置cookies - CSDN](https://blog.csdn.net/summer7310/article/details/90480828) - 2019
+    - [webpack-dev-server使用proxy跨域cookie問題 - CSDN](https://blog.csdn.net/qq_36297981/article/details/89528832) - 2019
+    - [webpack：proxy中cookie無法保存的解決辦法 - CSDN](https://blog.csdn.net/weixin_43160044/article/details/94901074) - 2019
+    - [wepack-dev-server無法傳遞cookie到後端的問題 - 掘金](https://juejin.cn/post/6844903984612818952) - 2019
