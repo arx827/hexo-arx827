@@ -115,16 +115,101 @@ tags: [筆記, CSS]
   - ### 切斷CSS與JavaScript的耦合
       JavaScript中用來選取元素的類別與ID不應該用來為元素指定樣式，
       當元素的樣式需要透過JavaScript來調整時，應該透過增刪類別的方式來做。
-      - 為JavaScript中的類別與ID名稱之前加上前綴
+      - #### 為JavaScript中的類別與ID名稱之前加上前綴
         於要用在JavaScript中的類別與ID名稱之前加上`js-`。
-      - 以類別修改元素樣式
+      - #### 以類別修改元素樣式
         與其透過JavaScript將樣式加到元素style屬性的方式來調整HTML元素的樣式，應該透過增刪元素類別的方式來進行調整。
   - ### 使用類別
-      元素使用唯一ID所能獲得的好處其實可以用唯一的類別名稱來替代，可以有相同的效果。
+    元素使用唯一ID所能獲得的好處其實可以用唯一的類別名稱來替代，可以有相同的效果。
       > <small>ID是JavaScript中選取元素最快的方法，
       > 與在類別名稱前加上 `js-` 一樣，
       > 不用它指定元素的樣式是另一種將CSS與JavaScript分離的好方法。</small>
   - ### 為類別取有意義的名稱
+    能清楚表達意義很重要，但也要注意千萬別做過頭了。
+    ` ex: .female-black-and-white-kitten `
+    - #### 避免類別過度模組化
+      有意義的類別名稱所表示的是要套用樣式的元素，而不是要被套用到元素上的樣式。 
+      ```html
+      <h1> class="font-bold uppercase blue-text margin-bottom-large no-padding"
+        Too Many CSS Classes
+      </h1>
+      ```
+      應該避免使用過度模組化的類別，因為它們比行內樣式好不到哪兒去。
+    - #### 建造較佳的盒框
+      盒框模型 (box model) 是瀏覽器決定如何渲染 (render) 一個方型區域的方法，HTML的所有元素基本上都可視為是一個盒框。
+      - ##### `box-sizing: content-box`
+        盒框元素 height 與 width，不包含 padding 與 border
+      - ##### `box-sizing: border-box`
+        盒框元素 height 與 width，包含 padding 與 border
+      為了一致性，通常只會選一種來使用，可以透過全域選取器來為它設定一個適當的值。
+
+## 第四章 - *為不同類型的樣式分類*
+  為不同樣式作分類才能善用串接的特性
+  - ### 樣式分類的重要性
+    具語意的 HTML標籤 來描述要呈現的內容。
+    有助於創建出更好的架構，因為將樣式組織成不同的分類能讓樣式碼更容易複用。
+  - ### 樣式正規化
+    不同的瀏覽器，樣式表集的屬性與值可能略有不同。
+    樣式正規化 (normalizing styles) 用來提供不同元素的屬性預設值。
+    為不同瀏覽器族系所製作的開源正規化樣式 ` ex: normalize.css `
+  - ### 基底樣式
+    基底樣式 (base styles) 用來作為其他特定度更高之樣式的建構基點。
+    編寫基底樣式時要注意的原則是，後來添加的樣式應該不需要覆寫太多基底樣式就可以做得出來。
+    - #### 定義基底樣式
+      設計樣式時，應考慮元素最常見的使用方式，適合於最常見之使用情境的值。
+      經常用到的屬性包括：
+        - `color`
+        - `font-family`
+        - `font-size`
+        - `font-weight`
+        - `letter-spacing`
+        - `line-height`
+        - `margin`
+        - `padding`
+    - #### 文件詮釋資料
+      文件詮釋資料 (metadata) 標籤包括`<head>`、`<title>`、`<base>`、`<link>`與`<meta>`等。
+      因為使用者看不到它們，所以無法指定這些標籤的樣式。
+    - #### 分段元素
+      分段元素 (sectioning elements)包括`<address>`、`<article>`、`<aside>`、`<body>`、`<footer>`、`<header>`、`<nav>`與`<section>`等。
+      通常會包含其他元素，構成HTML文件中不同的段落。
+    - #### 標頭與文本元素
+      標頭元素 (heading elements) 包括 `<h1>` ~ `<h6>` 元素，
+      是用來在HTML文件中定義每一不同段落主題的元素。
+      文本元素 (text elements) 包括 `figure`、`<figcaption>`、`<p>`與`<pre>`元素，用來顯示文本區塊。
+    - #### 錨點標籤
+      錨點標籤 (anchor tags) 提供可連到其他HTML文件或同一份HTML文件中段落的連結，
+      能搭配常用來顯示狀態的 `:link`、`:visited`、`:focus`、`:hover`與`:active` 虛擬類別。
+      - `:link`
+        套用在具有href屬性的元素上。
+      - `:visited`
+        套用在具有href屬性的連結上，且該連結的位置已列在瀏覽器的瀏覽歷史紀錄中。
+      - `:focus`
+        當元素被點選、觸碰或透過跳位鍵(Tab key)選到該元素時，此樣式會被套用。
+      - `:hover`
+        套用在滑鼠指標下的連結。在觸控裝置上，因為不具有hover狀態，通常會被套用在被觸碰的元素上。
+      - `:active`
+        套用在連結『被啟用(activated)』的元素上。
+        在滑鼠的情況下，點選連結但滑鼠鍵還未放開時就是處於這種狀態。
+        在觸控裝置上，點選元素但手指尚未移開螢幕時，元素會處於這種狀態。
+    - #### 文本語意
+      文本語意 (text semantics)，用來賦予文本更多意義或結構的元素。通常是行內型，包括：
+      `<abbr>`、`<b>`、`<cite>`、`<code>`、`<data>`、`<dfn>`、`<em>`、`<i>`、`<kbd>`、`<s>`、`<strong>`、`<sub>`、`<sup>`、`<time>`與`<u>`等標籤。
+    - #### 列表
+      包括
+        - `<ol>` (有序列表，ordered list)
+        - `<ul>` (無序列表，unordered list)
+        - `<dl>` (定義列表，definition list)
+      
+      有序與無序列表只能內含`<li>`(列表項目，list item)元素，
+      定義列表只能包含`<dt>`(定義項，definition term)與`<dd>`(定義說明，definition description)元素。
+
+      `list-style-type`、`list-style-image`與`list-style-position`屬性，
+      若列表元素比較少用，直接設定成 `none` 可能會比較好，避免需要不斷地去覆寫這些屬性。
+      `<ol>` 或 `<ul>` 的 `padding-left` 屬性應該設為0。
+      子`<li>`元素會繼承其父元素`<ol>`或`<ul>`的`font-family`、`font-size`與`line-height`屬性，但不會繼承`margin`、`padding`屬性。
+    - #### 群組元素
+      包括`<div>`、`<main>`與`<span>`。
+      `<span>`標籤，主要用來群組文本或行內元素。
 
 
 
