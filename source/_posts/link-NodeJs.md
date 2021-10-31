@@ -11,7 +11,6 @@ tags: [Node, NPM, 管理工具, link]
 
 #### NVM
   - [Mac下的NVM - HappyCoder 的填坑筆記](https://sasacode.wordpress.com/)
-  - [Node.js 安裝與版本切換教學 (for MAC) - icarus4](http://icarus4.logdown.com/posts/175092-nodejs-installation-guide) - 2014
   - [[iT邦]Node.js 必備工具 - NVM 、 NPM - Ivan Wei](https://ithelp.ithome.com.tw/articles/10184980) - 2016
   - [[iT邦]nvm - 版本隨你切 - 六角學院](https://ithelp.ithome.com.tw/articles/10207177) - 2018
   - [Node.js管理神器nvm - Medium](https://medium.com/%E5%93%86%E5%95%A6%E5%AF%A6%E9%A9%97%E5%AE%A4/node-js%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8nvm-b6acfca44ea5) - 2018
