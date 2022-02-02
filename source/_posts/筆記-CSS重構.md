@@ -155,7 +155,7 @@ tags: [筆記, CSS]
       > 不用它指定元素的樣式是另一種將CSS與JavaScript分離的好方法。</small>
   - ### 為類別取有意義的名稱
     能清楚表達意義很重要，但也要注意千萬別做過頭了。
-    ex: `.female-black-and-white-kitten `
+    e.g.: `.female-black-and-white-kitten `
     - #### 避免類別過度模組化
       有意義的類別名稱所表示的是要套用樣式的元素，而不是要被套用到元素上的樣式。 
       ```html
@@ -180,7 +180,7 @@ tags: [筆記, CSS]
   - ### 樣式正規化
     不同的瀏覽器，樣式表集的屬性與值可能略有不同。
     樣式正規化 (normalizing styles) 用來提供不同元素的屬性預設值。
-    為不同瀏覽器族系所製作的開源正規化樣式 ex: ` normalize.css `
+    為不同瀏覽器族系所製作的開源正規化樣式 e.g.: ` normalize.css `
   - ### 基底樣式
     基底樣式 (base styles) 用來作為其他特定度更高之樣式的建構基點。
     編寫基底樣式時要注意的原則是，後來添加的樣式應該不需要覆寫太多基底樣式就可以做得出來。
@@ -251,7 +251,7 @@ tags: [筆記, CSS]
     - #### 表單
       包括 `<form>`、`<label>`、`<input>`、`<button>`、`<select>`、`<datalist>`、`<optgroup>`、`<option>`、`<textarea>`、`<output>`、`<progress>`、`<meter>`、`<fieldset>`與`<legend>`等元素。
       某些表單元素的樣式可能不容易設定，因為瀏覽器會直接忽略其上所套用的屬性。
-      ex: 瀏覽器會忽略套用在複選框(checkboxes)與選項鈕(radio button)上的`border-color`、`border-width`、`background-color`或其他屬性。
+      e.g.: 瀏覽器會忽略套用在複選框(checkboxes)與選項鈕(radio button)上的`border-color`、`border-width`、`background-color`或其他屬性。
     - #### 影像
       圖片可透過`<img>`與`<picture>`標籤來呈現。
       因為`<img>`元素可在行內的格式情境中使用，`baseline`是`vertical-align`屬性的預設值。
@@ -803,7 +803,7 @@ tags: [筆記, CSS]
         - 簡單的模版使用說明
         - 為何要使用某特定模版的原因
       
-      ex: [Yelp 模版庫](https://www.yelp.com/styleguide)、[MailChimp 模版庫](https://ux.mailchimp.com/patterns)
+      e.g.: [Yelp 模版庫](https://www.yelp.com/styleguide)、[MailChimp 模版庫](https://ux.mailchimp.com/patterns)
       - ##### 好處
         模版庫呈現了所有組成網站的元件，讓每位成員都能取得建造網站的基礎元件，也可確保成員們熟悉其運作方式。
         不需為每一個新專案重新製作這些基礎元件。
