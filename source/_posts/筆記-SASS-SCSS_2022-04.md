@@ -27,532 +27,3275 @@ tags: [筆記, SASS/SCSS]
 
 <small>Releases v3.6.3 (2019/11/4)</small>
 
+是一種CSS預處理器，需要另外編譯成CSS，瀏覽器才看得懂。
 Sass 是一款強化CSS 的輔助工具，
-它在CSS 語法的基礎上增加了變數(variables)、嵌套(nested rules)、混合(mixins)、導入(inline imports) 等高級功能。
+它在CSS 語法的基礎上增加了變數(variables)、嵌套(nesting)、混合(mixins)、導入(inline imports) 等高級功能。
 <!-- more -->
 
 ## CSS 功能拓展
   - ### 嵌套規則
-    Sass 允許將一套CSS 樣式嵌套進另一套樣式中，
-    內層的樣式將它外層的選擇器作為父選擇器。
-    <div class="d-flex">
-      <div class="d-flex-item col">
-        ```scss
-          /* scss */
-          #main p {
-            color: #00ff00;
-            width: 97%;
-            .redbox {
-              background-color: #ff0000;
-              color: #000000;
-            }
-          }
-        ```
-      </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
-        ```css
-          /* css */
-          #main p {
-            color: #00ff00;
-            width: 97%;
-          }
-          #main p .redbox {
+    Sass 允許 CSS樣式使用嵌套方式。
+    - 範例
+      ```scss
+        /* scss */
+        #main p {
+          color: #00ff00;
+          width: 97%;
+          .redbox {
             background-color: #ff0000;
             color: #000000;
           }
-        ```
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
       </div>
-    </div>
-    <div class="d-flex">
-      <div class="d-flex-item col">
-        ```scss
-          /* scss */
-          ul > {
-            li {
-              list-style-type: none;
-            }
-          }
-          h2 {
-            + p {
-              border-top: 1px solid gray;
-            }
-          }
-          p {
-            ~ {
-              span {
-                opacity: 0.8;
-              }
-            }
-          }
-        ```
-      </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
-        ```css
-          /* scss */
-          ul > li {
+      ```css
+        /* css */
+        #main p {
+          color: #00ff00;
+          width: 97%;
+        }
+        #main p .redbox {
+          background-color: #ff0000;
+          color: #000000;
+        }
+      ```
+    - 範例
+      ```scss
+        /* scss */
+        ul > {
+          li {
             list-style-type: none;
           }
-          h2 + p {
+        }
+        h2 {
+          + p {
             border-top: 1px solid gray;
           }
-          p ~ span {
-            opacity: 0.8;
+        }
+        p {
+          ~ {
+            span {
+              opacity: 0.8;
+            }
           }
-        ```
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
       </div>
-    </div>
+      ```css
+        /* css */
+        ul > li {
+          list-style-type: none;
+        }
+        h2 + p {
+          border-top: 1px solid gray;
+        }
+        p ~ span {
+          opacity: 0.8;
+        }
+      ```
+    
   - ### 父選擇器 `&`
     在嵌套CSS 規則時，有時也需要直接使用嵌套外層的父選擇器。
     可以用 `&` 代表嵌套規則外層的父選擇器。
-    <div class="d-flex">
-      <div class="d-flex-item col">
-        ```scss
-          /* scss */
-          a {
-            font-weight: bold;
-            text-decoration: none;
-            &:hover { text-decoration: underline; }
-            body.firefox & { font-weight: normal; }
-          }
-        ```
+    - 範例
+      ```scss
+        /* scss */
+        a {
+          font-weight: bold;
+          text-decoration: none;
+          &:hover { text-decoration: underline; }
+          body.firefox & { font-weight: normal; }
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
       </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
-        ```css
-          /* css */
-          a {
-            font-weight: bold;
-            text-decoration: none;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-          body.firefox a {
-            font-weight: normal;
-          }
-        ```
-      </div>
-    </div>
+      ```css
+        /* css */
+        a {
+          font-weight: bold;
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        body.firefox a {
+          font-weight: normal;
+        }
+      ```
+
   - ### 屬性嵌套
     有些CSS 屬性遵循相同的命名空間(namespace)，
     比如 font-family, font-size, font-weight 都以 font 作為屬性的命名空間。
     為了便於管理這樣的屬性，同時也為了避免了重複輸入，Sass 允許將屬性嵌套在命名空間中。
-    <div class="d-flex">
-      <div class="d-flex-item col">
-        ```scss
-          /* scss */
-          .funky {
-            font: {
-              family: fantasy;
-              size: 30em;
-              weight: bold;
-            }
+    - 範例
+      ```scss
+        /* scss */
+        .funky {
+          font: {
+            family: fantasy;
+            size: 30em;
+            weight: bold;
           }
-        ```
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
       </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
-        ```css
-          /* css */
-          .funky {
-            font-family: fantasy;
-            font-size: 30em;
-            font-weight: bold;
-          }
-        ```
-      </div>
-    </div>
+      ```css
+        /* css */
+        .funky {
+          font-family: fantasy;
+          font-size: 30em;
+          font-weight: bold;
+        }
+      ```
 
 ## 註釋
-  - Sass 支持標準的CSS 多行註釋/* */，以及單行註釋//，
-  前者會被完整輸出到編譯後的CSS文件中，而後者則不會。
-  <div>
-    ```scss
-      /* scss */
-      /* This comment is
-      * several lines long.
-      * since it uses the CSS comment syntax,
-      * it will appear in the CSS output. */
-      body { color: black; }
-      // These comments are only one line long each.
-      // They won't appear in the CSS output,
-      // since they use the single-line comment syntax.
-      a { color: green; }
-    ```
-    <div class="d-flex">
-      <small class="arrow down">➤</small>
-      <small class="arrow down">➤</small>
-    </div>
-    ```css
-      /* css */
-      /* This comment is
-      * several lines long.
-      * since it uses the CSS comment syntax,
-      * it will appear in the CSS output. */
-      body {
-        color: black; }
-      a {
-        color: green; }
-    ```
-  </div>
+  - Sass 支持標準的CSS，
+    單行註釋 以`//`開頭。
+    多行註釋 以 `/*` 開頭， `*/` 結尾，多行註釋。
+    多行註釋 會完整保留至編譯後的CSS文件中，
+    單行註釋 則會在壓縮模式編譯後，從CSS中去除。
+    - 範例
+      ```scss
+        /* scss */
+        /* This comment is
+        * several lines long.
+        * since it uses the CSS comment syntax,
+        * it will appear in the CSS output. */
+        body { color: black; }
+        // These comments are only one line long each.
+        // They won't appear in the CSS output,
+        // since they use the single-line comment syntax.
+        a { color: green; }
 
-  - 將 `!` 作為多行註釋的第一個字符表示在壓縮輸出模式下保留這條註釋並輸出到CSS 文件中，通常用於添加版權信息。
-  也可在註釋中輸出變數值(插值語句)。
-  <div>
-    ```scss
-      /* scss */
-      $version: "1.2.3";
-      /* This CSS is generated by My Snazzy Framework version #{$version}. */
+        $version: "1.2.3";
+        /*! This comment will be included even in compressed mode. */
+        /*! This CSS is generated by My Snazzy Framework version #{$version}. */
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        /* This comment is
+        * several lines long.
+        * since it uses the CSS comment syntax,
+        * it will appear in the CSS output. */
+        body { color: black; }
+        a { color: green; }
+        /*! This comment will be included even in compressed mode. */
+        /*! This CSS is generated by My Snazzy Framework version 1.2.3. */
+      ```
+    但在壓縮模式編譯後的CSS中，也會移除多行註釋，若想保留，可以 `/*!` 作為多行註釋 開頭，
+    通常用於添加版權信息。也可在註釋中輸出變數值(插值語句)。
+     ```css
+      body { color: black; }
+      a { color: green; }
+      /*! This comment will be included even in compressed mode. */
+      /*! This CSS is generated by My Snazzy Framework version 1.2.3. */
     ```
-    <div class="d-flex">
-      <small class="arrow down">➤</small>
-      <small class="arrow down">➤</small>
-    </div>
-    ```css
-      /* css */
-      /* This CSS is generated by My Snazzy Framework version 1.2.3. */
-    ```
-  </div>
 
 ## 變數
   - Sass變數，以 `$` 開頭，可以在任何地方聲明。
   變數可以減少重複、進行複雜的運算。
-  <div class="d-flex">
-    <div class="d-flex-item col">
-      ```scss
-        /* scss */
-        $base-color: #c6538c;
-        $border-dark: rgba($base-color, 0.88);
-        .alert {
-          border: 1px solid $border-dark;
-        }
-      ```
+  - 範例
+    ```scss
+      /* scss */
+      $base-color: #c6538c;
+      $border-dark: rgba($base-color, 0.88);
+      .alert {
+        border: 1px solid $border-dark;
+      }
+    ```
+    <div class="d-flex">
+      <small class="arrow down">➤</small>
+      <small class="arrow down">➤</small>
     </div>
-    <div class="d-flex flex-direction-column">
-      <small class="arrow">➤</small>
-      <small class="arrow">➤</small>
-    </div>
-    <div class="d-flex-item col">
-      ```css
-        /* css */
-        .alert {
-          border: 1px solid rgba(198, 83, 140, 0.88);
-        }
-      ```
-    </div>
-  </div>
+    ```css
+      /* css */
+      .alert {
+        border: 1px solid rgba(198, 83, 140, 0.88);
+      }
+    ```
 
   - ### 默認值
     - 當變數賦值時，如果該變數已經有一個值，舊值將被覆蓋。
       Sass 提供了 `!default` 標誌。僅當該變數未定義或其值為 `null` ，才使用新值。
-      <div class="d-flex">
-        <div class="d-flex-item col">
-          ```scss
-            /* scss */
-            $content: "First content";
-            $content: "Second content?" !default;
-            #main {
-              content: $content;
-            }
-          ```
+      - 範例
+        ```scss
+          /* scss */
+          $content: "First content";
+          $content: "Second content?" !default;
+          #main {
+            content: $content;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
         </div>
-        <div class="d-flex flex-direction-column">
-          <small class="arrow">➤</small>
-          <small class="arrow">➤</small>
-        </div>
-        <div class="d-flex-item col">
-          ```css
-            /* css */
-            #main {
-              content: "First content";
-            }
-          ```
-        </div>
-      </div>
+        ```css
+          /* css */
+          #main {
+            content: "First content";
+          }
+        ```
 
     - 使用規則： `!default` 加載模塊時可以配置定義的變數。
       要加載帶有配置的模塊，請編寫 `@use <url> with (<variable>: <value>)` ，
       配置的值將覆蓋變數的默認值。
       只能配置在樣式表頂層編寫的帶有 `!default` 標誌的變數。
-      <div class="d-flex">
-        <div class="d-flex-item col">
-          ```scss
-            // _library.scss
-            $border-radius: 0.25rem !default;
-            code {
-              border-radius: $border-radius;
-            }
-          ```
-          ```scss
-            // style.scss
-            @use 'library' with (
-              $border-radius: 0.1rem
-            );
-          ```
+      - 範例
+        ```scss
+          // _library.scss
+          $border-radius: 0.25rem !default;
+          code {
+            border-radius: $border-radius;
+          }
+        ```
+        ```scss
+          // style.scss
+          @use 'library' with (
+            $border-radius: 0.1rem
+          );
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
         </div>
-        <div class="d-flex flex-direction-column">
-          <small class="arrow">➤</small>
-          <small class="arrow">➤</small>
-        </div>
-        <div class="d-flex-item col">
-          ```css
-            /* css */
-            code {
-              border-radius: 0.1rem;
-            }
-          ```
-        </div>
-      </div>
+        ```css
+          /* css */
+          code {
+            border-radius: 0.1rem;
+          }
+        ```
 
   - ### 作用域(區域變數、全域變數)
     - 當區域變數與全域變數同名時，不受全域變數影響。
-      <div class="d-flex">
-        <div class="d-flex-item col">
-          ```scss
-            /* scss */
-            $variable: global value;
-            .content {
-              $variable: local value;
-              value: $variable;
-            }
-            .sidebar {
-              value: $variable;
-            }
-          ```
+      - 範例
+        ```scss
+          /* scss */
+          $variable: global value;
+          .content {
+            $variable: local value;
+            value: $variable;
+          }
+          .sidebar {
+            value: $variable;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
         </div>
-        <div class="d-flex flex-direction-column">
-          <small class="arrow">➤</small>
-          <small class="arrow">➤</small>
-        </div>
-        <div class="d-flex-item col">
-          ```css
-            /* css */
-            .content {
-              value: local value;
-            }
-            .sidebar {
-              value: global value;
-            }
-          ```
-        </div>
-      </div>
+        ```css
+          /* css */
+          .content {
+            value: local value;
+          }
+          .sidebar {
+            value: global value;
+          }
+        ```
     
     - 使用規則： `!global`，始終配置全域變數，不受區域變數影響
-      <div class="d-flex">
-        <div class="d-flex-item col">
-          ```scss
-            /* scss */
-            $variable: first global value;
-            .content {
-              $variable: second global value !global;
-              value: $variable;
-            }
-            .sidebar {
-              value: $variable;
-            }
-          ```
+      - 範例
+        ```scss
+          /* scss */
+          $variable: first global value;
+          .content {
+            $variable: second global value !global;
+            value: $variable;
+          }
+          .sidebar {
+            value: $variable;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
         </div>
-        <div class="d-flex flex-direction-column">
-          <small class="arrow">➤</small>
-          <small class="arrow">➤</small>
-        </div>
-        <div class="d-flex-item col">
-          ```css
-            /* css */
-            .content {
-              value: second global value;
-            }
-            .sidebar {
-              value: second global value;
-            }
-          ```
-        </div>
-      </div>
+        ```css
+          /* css */
+          .content {
+            value: second global value;
+          }
+          .sidebar {
+            value: second global value;
+          }
+        ```
 
     - 使用規則： 條件式宣告
-      <div class="d-flex">
-        <div class="d-flex-item col">
-          ```scss
-            /* scss */
-            $dark-theme: true !default;
-            $primary-color: #f8bbd0 !default;
-            $accent-color: #6a1b9a !default;
+      - 範例
+        ```scss
+          /* scss */
+          $dark-theme: true !default;
+          $primary-color: #f8bbd0 !default;
+          $accent-color: #6a1b9a !default;
 
-            @if $dark-theme {
-              $primary-color: darken($primary-color, 60%);
-              $accent-color: lighten($accent-color, 60%);
-            }
+          @if $dark-theme {
+            $primary-color: darken($primary-color, 60%);
+            $accent-color: lighten($accent-color, 60%);
+          }
 
-            .button {
-              background-color: $primary-color;
-              border: 1px solid $accent-color;
-              border-radius: 3px;
-            }
-          ```
+          .button {
+            background-color: $primary-color;
+            border: 1px solid $accent-color;
+            border-radius: 3px;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
         </div>
-        <div class="d-flex flex-direction-column">
-          <small class="arrow">➤</small>
-          <small class="arrow">➤</small>
-        </div>
-        <div class="d-flex-item col">
-          ```css
-            /* css */
-            .button {
-              background-color: #750c30;
-              border: 1px solid #f5ebfc;
-              border-radius: 3px;
-            }
-          ```
-        </div>
-      </div>
+        ```css
+          /* css */
+          .button {
+            background-color: #750c30;
+            border: 1px solid #f5ebfc;
+            border-radius: 3px;
+          }
+        ```
 
 ## 插值
   - 使用 `#{}` 插值語句可以在選擇器或屬性名中使用變數。
     使用 `#{}` 可以避免Sass 運行運算表達式，直接編譯CSS。
-    <div class="d-flex">
-      <div class="d-flex-item col">
+    - 範例
+      ```scss
+        /* scss */
+        $name: '.foo';
+        $attr: border;
+        p#{$name} {
+          #{$attr}-color: blue;
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        p.foo {
+          border-color: blue;
+        }
+      ```
+    - 範例
+      ```scss
+        /* scss */
+        p {
+          $font-size: 12px;
+          $line-height: 30px;
+          font: #{$font-size}/#{$line-height};
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        p {
+          font: 12px/30px;
+        }
+      ```
+    - 範例
+      ```scss
+        /* scss */
+        @mixin corner-icon($name, $top-or-bottom, $left-or-right) {
+          .icon-#{$name} {
+            background-image: url("/icons/#{$name}.svg");
+            position: absolute;
+            #{$top-or-bottom}: 0;
+            #{$left-or-right}: 0;
+          }
+        }
+
+        @include corner-icon("mail", top, left);
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        .icon-mail {
+          background-image: url("/icons/mail.svg");
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      ```
+  - 注入未引用的字符串中。再動態生成名稱(例如：動畫)時，特別有用。
+    - 範例
+      ```scss
+        /* scss */
+        @mixin inline-animation($duration) {
+          $name: inline-#{unique-id()};
+
+          @keyframes #{$name} {
+            @content;
+          }
+
+          animation-name: $name;
+          animation-duration: $duration;
+          animation-iteration-count: infinite;
+        }
+
+        .pulse {
+          @include inline-animation(2s) {
+            from { background-color: yellow }
+            to { background-color: red }
+          }
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        .pulse {
+          animation-name: inline-u368htqnd;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+        @keyframes inline-u368htqnd {
+          from {
+            background-color: yellow;
+          }
+          to {
+            background-color: red;
+          }
+        }
+      ```
+
+## @規則
+  - ### `@use`
+    以模塊方式，從其他Sass樣式表中加載 mixins、函數或變數，並將來自多個樣式表的CSS組合在一起。
+    以這種方式加載的任何樣式都將在編譯CSS中，僅包含一次，無論被加載多少次。
+    - 範例
+      ```scss
+        // foundation/_code.scss
+        code {
+          padding: .25em;
+          line-height: 0;
+        }
+      ```
+      ```scss
+        // foundation/_lists.scss
+        ul, ol {
+          text-align: left;
+          & & {
+            padding: {
+              bottom: 0;
+              left: 0;
+            }
+          }
+        }
+      ```
+      ```scss
+        // style.scss
+        @use 'foundation/code';
+        @use 'foundation/lists';
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        code {
+          padding: .25em;
+          line-height: 0;
+        }
+        ul, ol {
+          text-align: left;
+        }
+        ul ul, ol ol {
+          padding-bottom: 0;
+          padding-left: 0;
+        }
+      ```
+
+    - #### 加載成員
+      使用命名空間方式呼叫模塊中的 變數、函數和mixins。
+      默認情況下，命名空間為URL最後的檔名。
+      - `<namespace>.<variable>`
+      - `<namespace>.<function>`
+      - `@include <namespace>.<mixin>()`
+      - 範例
         ```scss
-          /* scss */
-          $name: '.foo';
-          $attr: border;
-          p#{$name} {
-            #{$attr}-color: blue;
+          // src/_corners.scss
+          $radius: 3px;
+          @mixin rounded {
+            border-radius: $radius;
           }
         ```
-      </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
+        ```scss
+          // style.scss
+          @use "src/corners";
+          .button {
+            @include corners.rounded;
+            padding: 5px + corners.$radius;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
         ```css
           /* css */
-          p.foo {
-            border-color: blue;
+          .button {
+            border-radius: 3px;
+            padding: 8px;
           }
         ```
-      </div>
-    </div>
-    <div class="d-flex">
-      <div class="d-flex-item col">
+    
+      - ##### 自訂命名空間
+        `@use "<url>" as <namespace>`
+        - 範例
+          ```scss
+            // src/_corners.scss
+            $radius: 3px;
+            @mixin rounded {
+              border-radius: $radius;
+            }
+          ```
+          ```scss
+            // style.scss
+            @use "src/corners" as c;
+            .button {
+              @include c.rounded;
+              padding: 5px + c.$radius;
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            .button {
+              border-radius: 3px;
+              padding: 8px;
+            }
+          ```
+
+      - ##### 私有屬性
+        若不希望定義的所有屬性都在樣式表之外可用。
+        `-` 可以通過開頭的名稱來輕鬆定義私有屬性。
+        - 範例
+          ```scss
+            // src/_corners.scss
+            $-radius: 3px;
+            @mixin rounded {
+              border-radius: $-radius;
+            }
+          ```
+          ```scss
+            // style.scss
+            @use "src/corners";
+            .button {
+              @include corners.rounded;
+              // This is an error! $-radius isn't visible outside of `_corners.scss`.
+              padding: 5px + corners.$-radius;
+            }
+          ```
+      
+    - #### 配置模塊
+      `!default` 樣式表可以使用標誌 定義變數以使其可配置。
+      要加載帶有配置的模塊，請編寫 `@use <url> with (<variable>:<value>, <variable>:<value>)`。
+      配置的值將覆蓋變數的默認值。
+      - 範例
         ```scss
-          /* scss */
-          p {
-            $font-size: 12px;
-            $line-height: 30px;
-            font: #{$font-size}/#{$line-height};
+          // _library.scss
+          $black: #000 !default;
+          $border-radius: 0.25rem !default;
+          $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+          code {
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
           }
         ```
-      </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
+        ```scss
+          // style.scss
+          @use 'library' with (
+            $black: #222,
+            $border-radius: 0.1rem
+          );
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
         ```css
           /* css */
-          p {
-            font: 12px/30px;
+          code {
+            border-radius: 0.1rem;
+            box-shadow: 0 0.5rem 1rem rgba(34, 34, 34, 0.15);
           }
         ```
+  
+  - ### `@import`
+    能夠導入 Sass 和 CSS 樣式表。
+    Sass 團隊不鼓勵繼續使用該 `@import` 規則。
+    將在接下來的幾年中逐步淘汰。
+    請以 `@use` 取代。
+    > `@import` 有以下問題：
+    > @import 是全局的，必須為其添加前綴以避免命名衝突。
+    > 每個樣式表都會執行，造成編譯時間太久。
+    > 若同時載入同一份樣式表，都會被編譯，早成資源浪費。
+    > 沒有私有屬性。
+  
+    - 可使用逗點載入多個樣式。
+      - 範例
+        ```scss
+          // style.scss
+          @import 'foundation/code', 'foundation/lists';
+        ```
+    - 檔名開頭為`_`，僅用於導入而不會自行編譯。
+      - 範例
+        ```scss
+          // _lists.scss
+          ...
+        ```
+        ```scss
+          // style.scss
+          @import 'lists';
+        ```
+    - 可嵌套於樣式中 (使用 `mixin` 會是更好的選擇)
+      - 範例
+        ```scss
+          // style.scss
+          .theme-sample {
+            @import "theme";
+          }
+        ```
+
+  - ### `@mixin`、`@include`
+    定義可以在整個樣式表中重複使用的樣式。
+    - 範例
+      ```scss
+        /* scss */
+        @mixin reset-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        @mixin horizontal-list {
+          @include reset-list;
+          li {
+            display: inline-block;
+            margin: {
+              left: -2px;
+              right: 2em;
+            }
+          }
+        }
+
+        nav ul {
+          @include horizontal-list;
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
       </div>
-    </div>
-    <div class="d-flex">
-      <div class="d-flex-item col">
+      ```css
+        /* css */
+        nav ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        nav ul li {
+          display: inline-block;
+          margin-left: -2px;
+          margin-right: 2em;
+        }
+      ```
+
+    - #### 參數
+      但是必須傳入相同數量參數。
+      - 範例
         ```scss
           /* scss */
-          @mixin corner-icon($name, $top-or-bottom, $left-or-right) {
-            .icon-#{$name} {
-              background-image: url("/icons/#{$name}.svg");
-              position: absolute;
-              #{$top-or-bottom}: 0;
-              #{$left-or-right}: 0;
+          @mixin rtl($property, $ltr-value, $rtl-value) {
+            #{$property}: $ltr-value;
+            [dir=rtl] & {
+              #{$property}: $rtl-value;
             }
           }
 
-          @include corner-icon("mail", top, left);
-        ```
-      </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
-        ```css
-          /* css */
-          .icon-mail {
-            background-image: url("/icons/mail.svg");
-            position: absolute;
-            top: 0;
-            left: 0;
+          .sidebar {
+            @include rtl(float, left, right);
           }
         ```
-      </div>
-    </div>
-  - 注入未引用的字符串中。在動態生成名稱(例如：動畫)時，特別有用。
-    <div class="d-flex">
-      <div class="d-flex-item col">
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .sidebar {
+            float: left;
+          }
+          [dir=rtl] .sidebar {
+            float: right;
+          }
+        ```
+    
+    - #### 可選參數
+      可以通過定義一個默認值來使參數成為可選參數。
+      如果該參數未傳遞，則將使用該默認值。
+      - 範例
         ```scss
           /* scss */
-          @mixin inline-animation($duration) {
-            $name: inline-#{unique-id()};
+          @mixin replace-text($image, $x: 50%, $y: 50%) {
+            text-indent: -99999em;
+            overflow: hidden;
+            text-align: left;
 
-            @keyframes #{$name} {
+            background: {
+              image: $image;
+              repeat: no-repeat;
+              position: $x $y;
+            }
+          }
+
+          .mail-icon {
+            @include replace-text(url("/images/mail.svg"), 0);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .mail-icon {
+            text-indent: -99999em;
+            overflow: hidden;
+            text-align: left;
+            background-image: url("/images/mail.svg");
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+          }
+        ```
+
+    - #### 關鍵字參數
+      可以明確指定傳遞的參數名稱，避免參數順序問題。
+      - 範例
+        ```scss
+          /* scss */
+          @mixin square($size, $radius: 0) {
+            width: $size;
+            height: $size;
+
+            @if $radius != 0 {
+              border-radius: $radius;
+            }
+          }
+
+          .avatar {
+            @include square(100px, $radius: 4px);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 4px;
+          }
+        ```
+
+    - #### 任意參數
+      能夠接受任意數量的參數，最後一個參數以`...`結尾。
+      - 範例
+        ```scss
+          /* scss */
+          @mixin order($height, $selectors...) {
+            @for $i from 0 to length($selectors) {
+              #{nth($selectors, $i + 1)} {
+                position: absolute;
+                height: $height;
+                margin-top: $i * $height;
+              }
+            }
+          }
+
+          @include order(150px, "input.name", "input.address", "input.zip");
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          input.name {
+            position: absolute;
+            height: 150px;
+            margin-top: 0px;
+          }
+
+          input.address {
+            position: absolute;
+            height: 150px;
+            margin-top: 150px;
+          }
+
+          input.zip {
+            position: absolute;
+            height: 150px;
+            margin-top: 300px;
+          }
+        ```
+
+    - #### 內容塊
+      除了參數之外，mixin 還可以接受整個樣式塊，或內容塊。
+      注入並取代 `@content` 的位置。
+      - 範例
+        ```scss
+          /* scss */
+          @mixin hover {
+            &:not([disabled]):hover {
               @content;
             }
-
-            animation-name: $name;
-            animation-duration: $duration;
-            animation-iteration-count: infinite;
           }
 
-          .pulse {
-            @include inline-animation(2s) {
-              from { background-color: yellow }
-              to { background-color: red }
+          .button {
+            border: 1px solid black;
+            @include hover {
+              border-width: 2px;
             }
           }
         ```
-      </div>
-      <div class="d-flex flex-direction-column">
-        <small class="arrow">➤</small>
-        <small class="arrow">➤</small>
-      </div>
-      <div class="d-flex-item col">
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
         ```css
           /* css */
-          .pulse {
-            animation-name: inline-u368htqnd;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
+          .button {
+            border: 1px solid black;
           }
-          @keyframes inline-u368htqnd {
-            from {
-              background-color: yellow;
+          .button:not([disabled]):hover {
+            border-width: 2px;
+          }
+        ```
+
+      - 一個 mixin 可以包含多個 `@content`，內容塊將分別包含在每個 `@content`。
+      - mixin 可以將參數傳遞給它的內容塊。
+        - 範例
+          ```scss
+            /* scss */
+            @mixin media($types...) {
+              @each $type in $types {
+                @media #{$type} {
+                  @content($type);
+                }
+              }
             }
-            to {
-              background-color: red;
+
+            @include media(screen, print) using ($type) {
+              h1 {
+                font-size: 40px;
+                @if $type == print {
+                  font-family: Calluna;
+                }
+              }
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            @media screen {
+              h1 {
+                font-size: 40px;
+              }
+            }
+            @media print {
+              h1 {
+                font-size: 40px;
+                font-family: Calluna;
+              }
+            }
+          ```
+
+    - #### 縮寫
+      `@mixin` 可縮寫為 `=`
+      `@include` 可縮寫為 `+`
+      雖然語法簡潔，但語意讓人難懂。
+        - 範例
+          ```scss
+            /* scss */
+            =reset-list {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+            }
+            =horizontal-list {
+              +reset-list;
+              li {
+                display: inline-block;
+                margin: {
+                  left: -2px
+                  right: 2em
+                }
+              }
+            }
+            nav ul {
+              +horizontal-list;
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            nav ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+            }
+            nav ul li {
+              display: inline-block;
+              margin-left: -2px;
+              margin-right: 2em;
+            }
+          ```
+
+  - ### `@function`
+    定義自定義函數，以處理複雜運算。
+    回調使用 `@retrun`。
+    - 範例
+      ```scss
+        /* scss */
+        @function pow($base, $exponent) {
+          $result: 1;
+          @for $_ from 1 through $exponent {
+            $result: $result * $base;
+          }
+          @return $result;
+        }
+
+        .sidebar {
+          float: left;
+          margin-left: pow(4, 3) * 1px;
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
+      </div>
+      ```css
+        /* css */
+        .sidebar {
+          float: left;
+          margin-left: 64px;
+        }
+      ```
+
+    - #### 可選參數
+      可以通過定義一個默認值來使參數成為可選參數。
+      如果該參數未傳遞，則將使用該默認值。
+      - 範例
+        ```scss
+          /* scss */
+          @function invert($color, $amount: 100%) {
+            $inverse: change-color($color, $hue: hue($color) + 180);
+            @return mix($inverse, $color, $amount);
+          }
+
+          $primary-color: #036;
+          .header {
+            background-color: invert($primary-color, 80%);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .header {
+            background-color: #523314;
+          }
+        ```
+
+    - #### 關鍵字參數
+      可以明確指定傳遞的參數名稱，避免參數順序問題。
+      - 範例
+        ```scss
+          /* scss */
+          $primary-color: #036;
+          .banner {
+            background-color: $primary-color;
+            color: scale-color($primary-color, $lightness: +40%);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .banner {
+            background-color: #036;
+            color: #0a85ff;
+          }
+        ```
+
+    - #### 任意參數
+      能夠接受任意數量的參數，最後一個參數以`...`結尾。
+      - 範例
+        ```scss
+          /* scss */
+          @function sum($numbers...) {
+            $sum: 0;
+            @each $number in $numbers {
+              $sum: $sum + $number;
+            }
+            @return $sum;
+          }
+
+          .micro {
+            width: sum(50px, 30px, 100px);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .micro {
+            width: 180px;
+          }
+        ```
+
+    - #### `@return`
+      只允許在`@function`中出現。
+      - 範例
+        ```scss
+          @use "sass:string";
+
+          @function str-insert($string, $insert, $index) {
+            // Avoid making new strings if we don't need to.
+            @if string.length($string) == 0 {
+              @return $insert;
+            }
+
+            $before: string.slice($string, 0, $index);
+            $after: string.slice($string, $index);
+            @return $before + $insert + $after;
+          }
+        ```
+
+  - ### `@extend`
+    允許選擇器上，相互繼承樣式。
+    設計頁面時，經常會出現一個類應該具有另一個類的所有樣式以及自己的特定樣式。
+    例如：`BEM方法` 中的修飾符類。(在預設樣式上，增加了特殊樣式。)
+    但這會造成HTML混亂，容易因忘記包含這兩個類而出錯，並且可能會將非語意樣式問題帶入標籤中。
+    ```html
+      <!-- html -->
+      <div class="error error--serious">
+        Oh no! You've been hacked!
+      </div>
+    ```
+    ```css
+      /* css */
+      .error {
+        border: 1px #f00;
+        background-color: #fdd;
+      }
+
+      .error--serious {
+        border-width: 3px;
+      }
+    ```
+    `@extend`規則解決了此類問題。
+      - 範例
+        ```scss
+          /* scss */
+          .error {
+            border: 1px #f00;
+            background-color: #fdd;
+
+            &--serious {
+              @extend .error;
+              border-width: 3px;
             }
           }
         ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .error, .error--serious {
+            border: 1px #f00;
+            background-color: #fdd;
+          }
+          .error--serious {
+            border-width: 3px;
+          }
+        ```
+
+    當一個類`@extend`另一個類時，所有類都會進行相同配置。
+      - 範例
+        ```scss
+          /* scss */
+          .error:hover {
+            background-color: #fee;
+          }
+
+          .error--serious {
+            @extend .error;
+            border-width: 3px;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .error:hover, .error--serious:hover {
+            background-color: #fee;
+          }
+
+          .error--serious {
+            border-width: 3px;
+          }
+        ```
+
+    - #### `!optional` 聲明
+      如果`@extend`找不到對應的擴展樣式，將會報錯。
+      `!optional` 可讓`@extend`報錯時，不生成選擇器。
+        - 範例
+          ```scss
+            a.important {
+              @extend .notice !optional;
+            }
+          ```
+
+    - #### 佔位符選擇器
+      有時想編寫僅用於extend的樣式規則，不包含在 CSS 輸出中。在此情況下，可以使用佔位符選擇器 `%`。
+        - 範例
+          ```scss
+            /* scss */
+            %strong-alert {
+              font-weight: bold;
+            }
+            .error--serious {
+              @extend %strong-alert;
+              border-width: 3px;
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            .error--serious {
+              font-weight: bold;
+              border-width: 3px;
+            }
+          ```
+      
+    - #### Mixins or Extends
+      `@mixins` 與 `@extends` 兩者的概念蠻相近的，由於兩者都可以拿來做相同樣式的包裝，所以兩者的使用時機很容易讓人搞混。
+      由於 `@extends` 會智能統一擴展的樣式，生成混合後的樣式表，並修剪重複性的樣式。
+      處理重用性高的樣式時，建議採用 `@extends`。
+      處理需要帶參數而動態生成的樣式時，建議採用 `@mixins`。
+
+  - ### `@error`
+    導致編譯失敗並顯示錯誤消息。
+    在編寫帶有參數的`@mixins`或`@function`時，
+    通常為確保參數的類型和格式是預期的，若不是，
+    則需要通知用戶並將 `@mixins`或`@function` 停止運行。
+    - 範例
+      ```scss
+        /* scss */
+        @mixin reflexive-position($property, $value) {
+          @if $property != left and $property != right {
+            @error "Property #{$property} must be either left or right.";
+          }
+
+          $left-value: if($property == right, initial, $value);
+          $right-value: if($property == right, $value, initial);
+
+          left: $left-value;
+          right: $right-value;
+          [dir=rtl] & {
+            left: $right-value;
+            right: $left-value;
+          }
+        }
+
+        .sidebar {
+          @include reflexive-position(top, 12px);
+          //       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+          // Error: Property top must be either left or right.
+        }
+      ```
+
+  - ### `@warn`
+    與 `@error` 用法相同，
+    差異在於，不停止編譯的情況下打印警告。
+
+  - ### `@debug`
+    有時在開發樣式表時查看 變數 或 表達式 的值很有用。
+    與 `console` 雷同，能打印出運算後的值。
+    - 範例
+      ```scss
+        @mixin inset-divider-offset($offset, $padding) {
+          $divider-offset: (2 * $padding) + $offset;
+          @debug "divider offset: #{$divider-offset}";
+
+          margin-left: $divider-offset;
+          width: calc(100% - #{$divider-offset});
+        }
+      ```
+
+  - ### `@at-root`
+    將其中的樣式放在CSS 文檔的根目錄中，而不是使用正常的嵌套。
+    - 範例
+      ```scss
+        /* scss */
+        .parent {
+          ...
+          @at-root {
+            .child1 { ... }
+            .child2 { ... }
+          }
+          .step-child { ... }
+        }
+      ```
+      <div class="d-flex">
+        <small class="arrow down">➤</small>
+        <small class="arrow down">➤</small>
       </div>
+      ```css
+        /* css */
+        .parent { ... }
+        .child1 { ... }
+        .child2 { ... }
+        .parent .step-child { ... }
+      ```
+
+  - ### 控制指令
+    - #### `@if`、`@else`
+      可以控制區塊內的樣式是否編譯，表達式返回 `true`，才會編譯進CSS。
+      在SCSS中，假值只有 `false` 和 `null`。
+      其他的都認定為真值 ( `空值` 、 `空陣列` 、 `0` 都算真值)。
+      - 範例
+        ```scss
+          /* scss */
+          @mixin avatar($size, $circle: false) {
+            width: $size;
+            height: $size;
+
+            @if $circle {
+              border-radius: $size / 2;
+            }
+          }
+
+          .square-av { @include avatar(100px, $circle: false); }
+          .circle-av { @include avatar(100px, $circle: true); }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .square-av {
+            width: 100px;
+            height: 100px;
+          }
+
+          .circle-av {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+          }
+        ```
+
+      - ##### `@else`
+        - 範例
+          ```scss
+            /* scss */
+            $light-background: #f2ece4;
+            $light-text: #036;
+            $dark-background: #6b717f;
+            $dark-text: #d2e1dd;
+
+            @mixin theme-colors($light-theme: true) {
+              @if $light-theme {
+                background-color: $light-background;
+                color: $light-text;
+              } @else {
+                background-color: $dark-background;
+                color: $dark-text;
+              }
+            }
+
+            .banner {
+              @include theme-colors($light-theme: true);
+              body.dark & {
+                @include theme-colors($light-theme: false);
+              }
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            .banner {
+              background-color: #f2ece4;
+              color: #036;
+            }
+            body.dark .banner {
+              background-color: #6b717f;
+              color: #d2e1dd;
+            }
+          ```
+
+      - ##### `@else if`
+        - 範例
+          ```scss
+            /* scss */
+            @mixin triangle($size, $color, $direction) {
+              height: 0;
+              width: 0;
+
+              border-color: transparent;
+              border-style: solid;
+              border-width: $size / 2;
+
+              @if $direction == up {
+                border-bottom-color: $color;
+              } @else if $direction == right {
+                border-left-color: $color;
+              } @else if $direction == down {
+                border-top-color: $color;
+              } @else if $direction == left {
+                border-right-color: $color;
+              } @else {
+                @error "Unknown direction #{$direction}.";
+              }
+            }
+
+            .next {
+              @include triangle(5px, black, right);
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            .next {
+              height: 0;
+              width: 0;
+              border-color: transparent;
+              border-style: solid;
+              border-width: 2.5px;
+              border-left-color: black;
+            }
+          ```
+
+    - #### `@each`
+      可以輕鬆的為列表的每個元素或map中的每個元素生成樣式或評估代碼。
+      對於一些重複樣式非常有用。
+      - 範例
+        ```scss
+          /* scss */
+          $sizes: 40px, 50px, 80px;
+
+          @each $size in $sizes {
+            .icon-#{$size} {
+              font-size: $size;
+              height: $size;
+              width: $size;
+            }
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .icon-40px {
+            font-size: 40px;
+            height: 40px;
+            width: 40px;
+          }
+
+          .icon-50px {
+            font-size: 50px;
+            height: 50px;
+            width: 50px;
+          }
+
+          .icon-80px {
+            font-size: 80px;
+            height: 80px;
+            width: 80px;
+          }
+        ```
+
+      - ##### Map
+        可以透過 `@each` 迭代印出每個 鍵(key)/值(value) 對。
+        - 範例
+          ```scss
+            /* scss */
+            $icons: ("eye": "\f112", "start": "\f12e", "stop": "\f12f");
+
+            @each $name, $glyph in $icons {
+              .icon-#{$name}:before {
+                display: inline-block;
+                font-family: "Icon Font";
+                content: $glyph;
+              }
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            @charset "UTF-8";
+            .icon-eye:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: "";
+            }
+
+            .icon-start:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: "";
+            }
+
+            .icon-stop:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: "";
+            }
+          ```
+
+      - ##### 解構
+        通過 `@each` 自動將變數分配給內部列表中的每個值。
+        - 範例
+          ```scss
+            /* scss */
+            $icons:
+              "eye" "\f112" 12px,
+              "start" "\f12e" 16px,
+              "stop" "\f12f" 10px;
+
+            @each $name, $glyph, $size in $icons {
+              .icon-#{$name}:before {
+                display: inline-block;
+                font-family: "Icon Font";
+                content: $glyph;
+                font-size: $size;
+              }
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            @charset "UTF-8";
+            .icon-eye:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: "";
+              font-size: 12px;
+            }
+
+            .icon-start:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: "";
+              font-size: 16px;
+            }
+
+            .icon-stop:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: "";
+              font-size: 10px;
+            }
+          ```
+
+    - #### `@for`
+      有兩種寫法：
+      `@for $i from 1 to 10`，迴圈會從 `1~9` ，`不含10`。
+      `@for $i from 1 through 10`，迴圈會從 `1~10` 。
+      - 範例
+        ```scss
+          /* scss */
+          $base-color: #036;
+
+          @for $i from 1 through 3 {
+            ul:nth-child(3n + #{$i}) {
+              background-color: lighten($base-color, $i * 5%);
+            }
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          ul:nth-child(3n + 1) {
+            background-color: #004080;
+          }
+
+          ul:nth-child(3n + 2) {
+            background-color: #004d99;
+          }
+
+          ul:nth-child(3n + 3) {
+            background-color: #0059b3;
+          }
+        ```
+
+    - #### `@while`
+      當寫入的規則為 `true` 時，會持續迴圈，直到規則回傳 `false`。
+      請小心別造成無限迴圈...。
+      - 範例
+        ```scss
+          /* scss */
+          $i: 6;
+          $end : -2;
+
+          @while $i > $end {
+            .item-#{$i} { width: 2px * $i; }
+            $i: $i - 2;
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .item-6 {
+            width: 12px;
+          }
+
+          .item-4 {
+            width: 8px;
+          }
+
+          .item-2 {
+            width: 4px;
+          }
+
+          .item-0 {
+            width: 0px;
+          }
+        ```
+
+## 類型
+  - ### `Numbers`
+    Sass的數字有兩個組成成分：數字、單位。
+    - 範例
+      ```scss
+        @debug 100;
+        @debug 0.8;
+        @debug 16px;
+      ```
+    - #### 單位
+      Sass 對單位計算提供強大的支持。
+      - 範例
+        ```scss
+          @debug 4px * 6px; // 24px*px (read "square pixels")
+          @debug math.div(5px, 2s); // 2.5px/s (read "pixels per second")
+
+          // 3.125px*deg/s*em (read "pixel-degrees per second-em")
+          @debug 5px * math.div(math.div(30deg, 2s), 24em); 
+
+          $degrees-per-second: math.div(20deg, 1s);
+          @debug $degrees-per-second; // 20deg/s
+          @debug math.div(1, $degrees-per-second); // 0.05s/deg
+        ```
+      Sass 會自動兼容單位之間的轉換，但不支援不兼容的單位，Sass會報錯。
+      e.g. 尺寸單位 與 時間單位。
+      - 範例
+        ```scss
+          // CSS defines one inch as 96 pixels.
+          @debug 1in + 6px; // 102px or 1.0625in
+
+          @debug 1in + 1s;
+          //     ^^^^^^^^
+          // Error: Incompatible units s and in.
+        ```
+      當變數欲計算時，`#{$number}px`，會被認定為字串，無法計算。
+      請使用以下方式：
+      - 範例
+        ```scss
+          $number = 10px;
+          $number * 1px;
+        ```
+
+    - #### 精確
+      Sass 數字支持小數點後10位的精度。
+      - 只有小數點後10位數字，會編譯在CSS中。
+      - 如果兩個數字在小數點後10位皆相同，則兩者會被判定相等。
+      - 如果一個數字與整數的距離小於 0.0000000001 整數，則會被認定為整數。
+      - 範例
+        ```scss
+          @debug 0.012345678912345; // 0.0123456789
+          @debug 0.01234567891 == 0.01234567899; // true
+          @debug 1.00000000009; // 1
+          @debug 0.99999999991; // 1
+        ```
+    
+  - ### `Strings`
+    Sass支持兩種內部結構：帶引號的字符串、不帶引號的字符串(標識符)。
+    - 範例
+      ```scss
+        // SASS 提供了函數可進行轉換
+        @use "sass:string";
+
+        @debug string.unquote(".widget:hover"); // .widget:hover  (移除引號)
+        @debug string.quote(bold); // "bold"  (加上引號)
+      ```
+    - #### 跳脫
+      - 範例
+        ```scss
+          @debug "\""; // '"'
+          @debug \.widget; // \.widget
+        ```
+    - #### 字符串索引
+      - 範例
+        ```scss
+          @use "sass:string";
+
+          @debug string.index("Helvetica Neue", "Helvetica"); // 1
+          @debug string.index("Helvetica Neue", "Neue"); // 11
+          @debug string.slice("Roboto Mono", -4); // "Mono"
+        ```
+
+  - ### `Colors`
+    包含 十六進制代碼(`#f2ece4` 或 `#b37399aa`)、
+    CSS顏色名稱(`blue`、`red`)
+    或函數(`rgb()`、`rgba()`、`hsl()`、`hsla()`)。
+    - 範例
+      ```scss
+        @debug #f2ece4; // #f2ece4
+        @debug #b37399aa; // rgba(179, 115, 153, 67%)
+        @debug midnightblue; // #191970
+        @debug rgb(204, 102, 153); // #c69
+        @debug rgba(107, 113, 127, 0.8); // rgba(107, 113, 127, 0.8)
+        @debug hsl(228, 7%, 86%); // #dadbdf
+        @debug hsla(20, 20%, 85%, 0.7); // rgb(225, 215, 210, 0.7)
+      ```
+    SCSS支持許多有用的 顏色函數，可用於將顏色混合或調整色調、飽和度或亮度來創建新顏色。
+    - 範例
+      ```scss
+        @debug scale-color($venus, $lightness: +15%); // #a893a8
+        @debug mix($venus, midnightblue); // #594d85
+      ```
+
+  - ### `Lists`
+    Lists 包含一系列的值，不需要特殊的括號。
+    可以用逗點(,)、空格。
+    - #### 使用Lists
+      - ##### 索引
+        索引從1起算。
+        索引1代表第一個元素，索引-1代表倒數第一個元素。
+      - ##### 取得元素
+        可以使用 `list.nth($list, $n)` 函數獲取索引處的元素。
+        `$list`：Lists 本身。
+        `$n`： 想抓取的元素的索引。
+        - 範例
+          ```scss
+            @debug list.nth(10px 12px 16px, 2); // 12px
+            @debug list.nth([line1, line2, line3], -1); // line3
+          ```
+      - ##### 遞迴
+        - 範例
+          ```scss
+            /* scss */
+            $sizes: 40px, 50px, 80px;
+
+            @each $size in $sizes {
+              .icon-#{$size} {
+                font-size: $size;
+                height: $size;
+                width: $size;
+              }
+            }
+          ```
+          <div class="d-flex">
+            <small class="arrow down">➤</small>
+            <small class="arrow down">➤</small>
+          </div>
+          ```css
+            /* css */
+            .icon-40px {
+              font-size: 40px;
+              height: 40px;
+              width: 40px;
+            }
+
+            .icon-50px {
+              font-size: 50px;
+              height: 50px;
+              width: 50px;
+            }
+
+            .icon-80px {
+              font-size: 80px;
+              height: 80px;
+              width: 80px;
+            }
+          ```
+      - ##### 添加
+        使用 `list.append($list, $val)` 函數。
+        - 範例
+          ```scss
+            @debug append(10px 12px 16px, 25px); // 10px 12px 16px 25px
+            @debug append([col1-line1], col1-line2); // [col1-line1, col1-line2]
+          ```
+    - #### 查找元素索引
+      檢查一個元素是否在列表中或找到索引，
+      使用 `list.index($list, $value)` 函數。
+      如果該值不在list中，則 `list.index()` 返回 null。
+      - 範例
+        ```scss
+          @debug list.index(1px solid red, 1px); // 1
+          @debug list.index(1px solid red, solid); // 2
+          @debug list.index(1px solid red, dashed); // null
+        ```
+      - 範例
+        ```scss
+          @use "sass:list";
+
+          $valid-sides: top, bottom, left, right;
+
+          @mixin attach($side) {
+            @if not list.index($valid-sides, $side) {
+              @error "#{$side} is not a valid side. Expected one of #{$valid-sides}.";
+            }
+            // ...
+          }
+        ```
+    - #### 不變性
+      Sass的列表函數都會返回新的list而不是修改原始列表。
+      但仍然可以通過將新列表分配給同一變數，隨時間更新狀態。
+      通常在函數和mixin中使用，以將一堆值收集到列表中。
+      - 範例
+        ```scss
+          /* scss */
+          @use "sass:list";
+          @use "sass:map";
+
+          $prefixes-by-browser: ("firefox": moz, "safari": webkit, "ie": ms);
+
+          @function prefixes-for-browsers($browsers) {
+            $prefixes: ();
+            @each $browser in $browsers {
+              $prefixes: list.append($prefixes, map.get($prefixes-by-browser, $browser));
+            }
+            @return $prefixes;
+          }
+
+          @debug prefixes-for-browsers("firefox" "ie"); // moz ms
+        ```
+    
+    - ##### 參數列表
+      當聲明一個接受任意參數的 mixin 或 函數時，
+      得到的值是一個特殊列表，稱為 `參數列表`。
+      當用戶傳遞了關鍵字參數，則可以通過將參數列表傳遞給 `meta.keywords()`函數來將它們映射。
+      - 範例
+        ```scss
+          /* scss */
+          @use "sass:meta";
+
+          @mixin syntax-colors($args...) {
+            @debug meta.keywords($args);
+            // (string: #080, comment: #800, variable: #60b)
+
+            @each $name, $color in meta.keywords($args) {
+              pre span.stx-#{$name} {
+                color: $color;
+              }
+            }
+          }
+
+          @include syntax-colors(
+            $string: #080,
+            $comment: #800,
+            $variable: #60b,
+          )
+        ```
+      - 範例
+        ```css
+          /* css */
+          pre span.stx-string {
+            color: #080;
+          }
+
+          pre span.stx-comment {
+            color: #800;
+          }
+
+          pre span.stx-variable {
+            color: #60b;
+          }
+        ```
+
+  - ### `Maps`
+    Sass中的映射包含鍵和值對，並且可以通過對應的`key`輕鬆查找`value`。
+    `key`必須是唯一的，與Lists不同，Maps必須用括號括起來。
+    Maps 允許將任何Sass值當作key。
+    - #### 查找值
+      `map.get($map, $key)` 函數，會返回對應的值。
+      - 範例
+        ```scss
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+          @debug map.get($font-weights, "medium"); // 500
+          @debug map.get($font-weights, "extra-bold"); // nul
+        ```
+    - #### 遞迴
+      使用 `@each`，key 跟 value 會被分配給對應的變數，因此可以輕鬆的使用它們。
+      - 範例
+        ```scss
+          /* scss */
+          $icons: ("eye": "\f112", "start": "\f12e", "stop": "\f12f");
+
+          @each $name, $glyph in $icons {
+            .icon-#{$name}:before {
+              display: inline-block;
+              font-family: "Icon Font";
+              content: $glyph;
+            }
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          @charset "UTF-8";
+          .icon-eye:before {
+            display: inline-block;
+            font-family: "Icon Font";
+            content: "";
+          }
+
+          .icon-start:before {
+            display: inline-block;
+            font-family: "Icon Font";
+            content: "";
+          }
+
+          .icon-stop:before {
+            display: inline-block;
+            font-family: "Icon Font";
+            content: "";
+          }
+        ```
+    - #### 新增/修改
+      `map.set($map, $key, $value)` 函數。
+      - 範例
+        ```scss
+          @use "sass:map";
+
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+          @debug map.set($font-weights, "extra-bold", 900);
+          // ("regular": 400, "medium": 500, "bold": 700, "extra-bold": 900)
+          @debug map.set($font-weights, "bold", 900);
+          // ("regular": 400, "medium": 500, "bold": 900)
+        ```
+    - #### 合併
+      `map.merge($map1, $map2)`。
+      - 範例
+        ```scss
+          @use "sass:map";
+
+          $light-weights: ("lightest": 100, "light": 300);
+          $heavy-weights: ("medium": 500, "bold": 700);
+
+          @debug map.merge($light-weights, $heavy-weights);
+          // ("lightest": 100, "light": 300, "medium": 500, "bold": 700)
+        ```
+      若兩個Maps具有相同的 `key`，則在合併中會使用第二個Maps的 `value`。
+      - 範例
+        ```scss
+          @use "sass:map";
+
+          $weights: ("light": 300, "medium": 500);
+
+          @debug map.merge($weights, ("medium": 700));
+          // ("light": 300, "medium": 700)
+        ```
+    - #### 不變性
+      與`Lists`一樣，
+      Sass的列表函數都會返回新的Maps而不是修改原始Maps。
+      但仍然可以通過將新Maps分配給同一變數，隨時間更新狀態。
+      通常在函數和mixin中使用，以將一堆值收集到列表中。
+      - 範例
+        ```scss
+          @use "sass:map";
+
+          $prefixes-by-browser: ("firefox": moz, "safari": webkit, "ie": ms);
+
+          @mixin add-browser-prefix($browser, $prefix) {
+            $prefixes-by-browser: map.merge($prefixes-by-browser, ($browser: $prefix)) !global;
+          }
+
+          @include add-browser-prefix("opera", o);
+          @debug $prefixes-by-browser;
+          // ("firefox": moz, "safari": webkit, "ie": ms, "opera": o)
+        ```
+
+  - ### `Boolean`
+    Boolean 是邏輯`true`和`false`。
+    falsey 值只包含 `null` 與 `false`，其餘都是 truthy。
+    - 範例
+      ```scss
+        @use "sass:math";
+
+        @debug 1px == 2px; // false
+        @debug 1px == 1px; // true
+        @debug 10px < 3px; // false
+        @debug math.comparable(100px, 3in); // true
+      ```
+
+    - #### 運算
+      - 範例
+        ```scss
+          @debug true and true; // true
+          @debug true and false; // false
+
+          @debug true or false; // true
+          @debug false or false; // false
+
+          @debug not true; // false
+          @debug not false; // true
+        ```
+
+    - #### 使用
+      通常與 `@if` 一起使用。
+      - 範例
+        ```scss
+          /* scss */
+          @mixin avatar($size, $circle: false) {
+            width: $size;
+            height: $size;
+
+            @if $circle {
+              border-radius: $size / 2;
+            }
+          }
+
+          .square-av {
+            @include avatar(100px, $circle: false);
+          }
+          .circle-av {
+            @include avatar(100px, $circle: true);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .square-av {
+            width: 100px;
+            height: 100px;
+          }
+
+          .circle-av {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+          }
+        ```
+
+    - #### 三元運算式
+      - 範例
+        ```scss
+          /* scss */
+          @debug if(true, 10px, 30px); // 10px
+          @debug if(false, 10px, 30px); // 30px
+        ```
+  - ### `null`
+    - 範例
+      ```scss
+        @use "sass:map";
+        @use "sass:string";
+
+        @debug string.index("Helvetica Neue", "Roboto"); // null
+        @debug map.get(("large": 20px), "small"); // null
+        @debug &; // null
+      ```
+
+    - #### 省略
+      若屬性列表中含有null，則會部份省略。
+      - 範例
+        ```scss
+          /* scss */
+          $fonts: ("serif": "Helvetica Neue", "monospace": "Consolas");
+
+          h3 {
+            font: 18px bold map-get($fonts, "sans");
+          }
+        ```
+        ```css
+          /* css */
+          h3 {
+            font: 18px bold;
+          }
+        ```
+      若屬性值為 `null`，則生成的CSS將會全部省略。
+      - 範例
+        ```scss
+          /* scss */
+          $fonts: ("serif": "Helvetica Neue", "monospace": "Consolas");
+
+          h3 {
+            font: {
+              size: 18px;
+              weight: bold;
+              family: map-get($fonts, "sans");
+            }
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          h3 {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        ```
+    - #### falsey
+      - 範例
+        ```scss
+          /* scss */
+          @mixin app-background($color) {
+            #{if(&, '&.app-background', '.app-background')} {
+              background-color: $color;
+              color: rgba(#fff, 0.75);
+            }
+          }
+
+          @include app-background(#036);
+
+          .sidebar {
+            @include app-background(#c6538c);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .app-background {
+            background-color: #036;
+            color: rgba(255, 255, 255, 0.75);
+          }
+
+          .sidebar.app-background {
+            background-color: #c6538c;
+            color: rgba(255, 255, 255, 0.75);
+          }
+        ```
+  - ### `Calculations`(計算)
+    `計算` 是 Sass表示 `calc()`函數的方式，以及類似的函數，如 `clamp()`、`min()`和`max()`。
+    Sass將盡可能簡化這些，使它們相互結合。
+    ```scss
+      @debug calc(400px + 10%); // calc(400px + 10%)
+      @debug calc(400px / 2); // 200px
+      @debug min(100px, calc(1rem + 10%)); // min(100px, 1rem + 10%)
+    ```
+    在 `計算` 中可以使用 sass變數、sass函數。
+    也可在 `計算` 中使用插值，但這樣做會讓括號中的任何內容都不會被簡化或類型檢查，
+    與其寫 `calc(10px + #{$var})`，不如寫 `calc(10px + $var)`。
+
+    - #### 運用
+      不能將`計算`與正常的Sass運算一起使用。只需將他們包覆在`calc()`表達式中。
+      - 範例
+        ```scss
+          $width: calc(100% + 10px);
+          @debug $width * 2; // Error!
+          @debug calc($width * 2); // calc((100% + 10px) * 2);
+        ```
+    - #### `min()` 和 `max()`
+      CSS添加了對 `Values and Units Level 4` 的支持 `min()` 和 `max()` 函數，
+      但Sass早在此之前就支援 `min()` 和 `max()` 函數，
+      所以Sass會自動調適使用CSS函數或使用Sass函數。
+      - 範例
+        ```scss
+          /* scss */
+          $padding: 12px;
+
+          .post {
+            // Since these max() calls are valid calculation expressions, they're
+            // parsed as calculations.
+            padding-left: max($padding, env(safe-area-inset-left));
+            padding-right: max($padding, env(safe-area-inset-right));
+          }
+
+          .sidebar {
+            // Since these use the SassScript-only modulo operator, they're parsed as
+            // SassScript function calls.
+            padding-left: max($padding % 10, 20px);
+            padding-right: max($padding % 10, 20px);
+          }
+        ```
+        <div class="d-flex">
+          <small class="arrow down">➤</small>
+          <small class="arrow down">➤</small>
+        </div>
+        ```css
+          /* css */
+          .post {
+            padding-left: max(12px, env(safe-area-inset-left));
+            padding-right: max(12px, env(safe-area-inset-right));
+          }
+
+          .sidebar {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        ```
+
+  - ### `Function`
+  不能直接將 `Function` 寫為值，
+  但可以將 `Function` 的名稱傳遞給 `meta.get-function()` 函數，將其作為值獲取。
+  - 範例
+    ```scss
+      /* scss */
+      @use "sass:list";
+      @use "sass:meta";
+      @use "sass:string";
+
+      /// Return a copy of $list with all elements for which $condition returns `true`
+      /// removed.
+      @function remove-where($list, $condition) {
+        $new-list: ();
+        $separator: list.separator($list);
+        @each $element in $list {
+          @if not meta.call($condition, $element) {
+            $new-list: list.append($new-list, $element, $separator: $separator);
+          }
+        }
+        @return $new-list;
+      }
+
+      $fonts: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+      content {
+        @function contains-helvetica($string) {
+          @return string.index($string, "Helvetica");
+        }
+        font-family: remove-where($fonts, meta.get-function("contains-helvetica"));
+      }
+    ```
+    <div class="d-flex">
+      <small class="arrow down">➤</small>
+      <small class="arrow down">➤</small>
     </div>
+    ```css
+      /* css */
+      .content {
+        font-family: Tahoma, Geneva, Arial, sans-serif;
+      }
+    ```
 
+## 高階用法 - 內置模塊
+  - ### `sass:color`
+    - #### 顏色設置
+      - ##### 創建RGB色
+        `R: red(紅色)`、`G: green(綠色)`、`B: blue(藍色)`。
+        ```scss
+          rgb(red, green, blue)
+        ```
+        - 範例：
+          ```scss
+            rgb(0, 0, 255);
+          ```
 
+      - ##### 創建RGBA色
+        `R: red(紅色)`、`G: green(綠色)`、`B: blue(藍色)`、`A: alpha(透明)`。
+        ```scss
+          rgba(red, green, blue, alpha)
+        ```
+          - 範例：
+          ```scss
+            rgba(0, 0, 255, 0.3);
+          ```
 
+      - ##### 創建hsl色
+        `H: hue(色相)`、`S: saturation(飽和度)`、`L: lightness(亮度)`。
+        ```scss
+          hsl(hue, saturation, lightness)
+        ```
+          - 範例：
+          ```scss
+            hsl(120, 100%, 50%); // 綠色
+            hsl(120, 100%, 75%); // 淺綠色
+            hsl(120, 100%, 25%); // 深綠色
+            hsl(120, 60%, 70%); // 柔和的綠色
+          ```
 
-<div style="text-align: center; color:#aaa;"><small>/... 未完待續 .../</small></div>
+      - ##### 創建hsla色
+        `H: hue(色相)`、`S: saturation(飽和度)`、`L: lightness(亮度)`、`A: alpha(透明)`。
+        ```scss
+          hsla(hue, saturation, lightness, alpha)
+        ```
+          - 範例：
+          ```scss
+            hsla(120, 100%, 50%, 0.3); // 綠色帶有透明度
+            hsla(120, 100%, 75%, 0.3); // 淺綠色帶有透明度
+          ```
+
+      - ##### 返回灰色
+        將一個顏色變成灰色，相當於`desaturate(color, 100%)`。
+        ```scss
+          color.grayscale($color)
+          grayscale($color) //=> color 
+        ```
+          - 範例：
+          ```scss
+            @debug color.grayscale(#6b717f); // #757575
+            @debug color.grayscale(#d2e1dd); // #dadada
+            @debug color.grayscale(#036); // #333333
+          ```
+
+      - ##### 返回補色
+        返回一個補色，相當於 `adjust-hue($color, 180deg)`。
+        ```scss
+          color.complement($color)
+          complement($color) //=> color 
+        ```
+          - 範例：
+          ```scss
+            // Hue 222deg becomes 42deg.
+            @debug color.complement(#6b717f); // #7f796b
+
+            // Hue 164deg becomes 344deg.
+            @debug color.complement(#d2e1dd); // #e1d2d6
+
+            // Hue 210deg becomes 30deg.
+            @debug color.complement(#036); // #663300
+          ```
+
+      - ##### 返回對比色
+        返回一個對比色，紅、綠、藍色值倒過來，而透明度不變。
+        ```scss
+          color.invert($color, $weight: 100%)
+          invert($color, $weight: 100%) //=> color 
+        ```
+          - 範例：
+          ```scss
+            @debug color.invert(#b37399); // #4c8c66
+            @debug color.invert(black); // white
+            @debug color.invert(#550e0c, 20%); // #663b3a
+          ```
+      
+    - #### 顏色獲取
+      - ##### 獲取紅色值
+        從一個顏色中獲取其中紅色值 (0~255)。
+        ```scss
+          color.red($color)
+          red($color) //=> number   
+        ```
+          - 範例：
+          ```scss
+            @debug color.red(#e1d7d2); // 225
+            @debug color.red(white); // 255
+            @debug color.red(black); // 0
+          ```
+
+      - ##### 獲取綠色值
+        從一個顏色中獲取其中綠色值 (0~255)。
+        ```scss
+          color.green($color)
+          green($color) //=> number 
+        ```
+          - 範例：
+          ```scss
+            @debug color.green(#e1d7d2); // 215
+            @debug color.green(white); // 255
+            @debug color.green(black); // 0
+          ```
+
+      - ##### 獲取藍色值
+        從一個顏色中獲取其中藍色值 (0~255)。
+        ```scss
+          color.blue($color)
+          blue($color) //=> number 
+        ```
+          - 範例：
+          ```scss
+            @debug color.blue(#e1d7d2); // 210
+            @debug color.blue(white); // 255
+            @debug color.blue(black); // 0
+          ```
+
+      - ##### 獲取色調
+        返回顏色在 HSL 色值中的角度值 (0deg - 255deg)。
+        ```scss
+          color.hue($color)
+          hue($color) //=> number 
+        ```
+          - 範例：
+          ```scss
+            @debug color.hue(#e1d7d2); // 20deg
+            @debug color.hue(#f2ece4); // 34.2857142857deg
+            @debug color.hue(#dadbdf); // 228deg
+          ```
+
+      - ##### 獲取飽和度
+        獲取一個顏色的飽和度值 (0% - 100%)。
+        ```scss
+          saturation(color)
+        ```
+          - 範例：
+          ```scss
+            saturation(#7fffd4); // 100%
+          ```
+
+      - ##### 獲取亮度
+        獲取一個顏色的亮度值 (0% - 100%)。
+        ```scss
+          lightness(color)
+        ```
+          - 範例：
+          ```scss
+            lightness(#7fffd4); // 74.9%
+          ```
+
+      - ##### 獲取alpha通道
+        獲取一個顏色的alpha通道值 (0 - 1)。
+        ```scss
+          alpha($color)
+        ```
+          - 範例：
+          ```scss
+            @debug color.alpha(#e1d7d2); // 1
+          ```
+
+      - ##### 獲取opacity
+        獲取一個顏色的透明度值 (0 - 1)。
+        ```scss
+          opacity($color) //=> number 
+        ```
+          - 範例：
+          ```scss
+            @debug color.opacity(rgb(210, 225, 221, 0.4)); // 0.4
+          ```
+
+    - #### 顏色操作
+      - ##### 混合
+        把兩種顏色混合起來。
+        `$weight` 參數必須是 0% 到 100%。
+        默認 `$weight` 為 50%，表明新顏色各取50% `color1` 和 `color2`的色值相加。
+        如果 `$weight` 為 25%，那表明新顏色為25% `color1` 和 75% `color2`的色值相加。
+        ```scss
+          color.mix($color1, $color2, $weight: 50%)
+          mix($color1, $color2, $weight: 50%) //=> color 
+        ```
+          - 範例：
+          ```scss
+            @debug color.mix(#036, #d2e1dd); // #698aa2
+            @debug color.mix(#036, #d2e1dd, 75%); // #355f84
+            @debug color.mix(#036, #d2e1dd, 25%); // #9eb6bf
+            @debug color.mix(rgba(242, 236, 228, 0.5), #6b717f); // rgba(141, 144, 152, 0.75)
+          ```
+
+      - ##### 改變色相
+        增加或減少 `$color` 的色相值 (-360deg ~ 360deg)，創建一個新的顏色。
+        ```scss
+          adjust-hue($color, $degrees) //=> color 
+        ```
+          - 範例：
+          ```scss
+            // Hue 222deg becomes 282deg.
+            @debug adjust-hue(#6b717f, 60deg); // #796b7f
+
+            // Hue 164deg becomes 104deg.
+            @debug adjust-hue(#d2e1dd, -60deg); // #d6e1d2
+
+            // Hue 210deg becomes 255deg.
+            @debug adjust-hue(#036, 45); // #1a0066
+          ```
+
+      - #### 增加或減少$color的色調
+        `$hue` 必須介於 (-360deg ~ 360deg)之間的數字，才能添加$color的色調。
+        可以是無單位。
+        ```scss
+          adjust-hue($color, $degrees) //=> color 
+        ```
+          - 範例：
+          ```scss
+            // Hue 222deg becomes 282deg.
+            @debug adjust-hue(#6b717f, 60deg); // #796b7f
+
+            // Hue 164deg becomes 104deg.
+            @debug adjust-hue(#d2e1dd, -60deg); // #d6e1d2
+
+            // Hue 210deg becomes 255deg.
+            @debug adjust-hue(#036, 45); // #1a0066
+          ```
+
+      - #### 按固定量增加或減少$color
+        `$color` 按固定量增加或減少的一項或多項屬性。
+        將每個關鍵字參數傳遞到顏色的相應屬性中，並返回調整後的顏色。
+        所有可選參數必須是數字，必須是無單位介於`-255`到`255`之間。
+        ```scss
+          color.adjust($color,
+          $red: null, $green: null, $blue: null,
+          $hue: null, $saturation: null, $lightness: null,
+          $whiteness: null, $blackness: null,
+          $alpha: null)
+
+          adjust-color(...) //=> color
+        ```
+          - 範例：
+          ```scss
+            @debug color.adjust(#6b717f, $red: 15); // #7a717f
+            @debug color.adjust(#d2e1dd, $red: -10, $blue: 10); // #c8e1e7
+            @debug color.adjust(#998099, $lightness: -30%, $alpha: -0.4); // rgba(71, 57, 71, 0.6)
+          ```
+
+      - #### 替換
+        將顏色的一個或多個屬性設置為新值。
+        ```scss
+          color.change($color,
+            $red: null, $green: null, $blue: null,
+            $hue: null, $saturation: null, $lightness: null,
+            $whiteness: null, $blackness: null,
+            $alpha: null)
+          change-color(...) //=> color 
+        ```
+          - 範例：
+          ```scss
+            @debug color.change(#6b717f, $red: 100); // #64717f
+            @debug color.change(#d2e1dd, $red: 100, $blue: 50); // #64e132
+            @debug color.change(#998099, $lightness: 30%, $alpha: 0.5); // rgba(85, 68, 85, 0.5)
+          ```
+
+      - #### 調深
+        使 `$color` 顏色更深，(0% ~ 100%)。
+        ```scss
+          darken($color, $amount) //=> color 
+        ```
+          - 範例：
+          ```scss
+            // Lightness 92% becomes 72%.
+            @debug darken(#b37399, 20%); // #7c4465
+
+            // Lightness 85% becomes 45%.
+            @debug darken(#f2ece4, 40%); // #b08b5a
+
+            // Lightness 20% becomes 0%.
+            @debug darken(#036, 30%); // black
+          ```
+
+      - #### 調淺
+        使 `$color` 顏色更淺，(0% ~ 100%)。
+        ```scss
+          lighten($color, $amount) //=> color 
+        ```
+          - 範例：
+          ```scss
+            // Lightness 46% becomes 66%.
+            @debug lighten(#6b717f, 20%); // #a1a5af
+
+            // Lightness 20% becomes 80%.
+            @debug lighten(#036, 60%); // #99ccff
+
+            // Lightness 85% becomes 100%.
+            @debug lighten(#e1d7d2, 30%); // white
+          ```
+
+      - #### 增加飽和度
+        使 `$color` 飽和度更高，(0% ~ 100%)。
+        ```scss
+          saturate($color, $amount) //=> color 
+        ```
+          - 範例：
+          ```scss
+            // Saturation 50% becomes 70%.
+            @debug saturate(#c69, 20%); // #e05299
+
+            // Saturation 35% becomes 85%.
+            @debug desaturate(#f2ece4, 50%); // #ebebeb
+
+            // Saturation 80% becomes 100%.
+            @debug saturate(#0e4982, 30%);  // #004990
+          ```
+
+      - #### 降低飽和度
+        使 `$color` 飽和度降低，(0% ~ 100%)。
+        ```scss
+          desaturate($color, $amount) //=> color  
+        ```
+          - 範例：
+          ```scss
+            // Saturation 100% becomes 80%.
+            @debug desaturate(#036, 20%); // #0a335c
+
+            // Saturation 35% becomes 15%.
+            @debug desaturate(#f2ece4, 20%); // #eeebe8
+
+            // Saturation 20% becomes 0%.
+            @debug desaturate(#d2e1dd, 30%); // #dadada
+          ```
+
+      - #### 流暢地縮放一個或多個屬性
+        ```scss
+          color.scale($color,
+            $red: null, $green: null, $blue: null,
+            $saturation: null, $lightness: null,
+            $whiteness: null, $blackness: null,
+            $alpha: null)
+          scale-color(...) //=> color 
+        ```
+          - 範例：
+            ```scss
+              @debug color.scale(#6b717f, $red: 15%); // #81717f
+              @debug color.scale(#d2e1dd, $lightness: -10%, $saturation: 10%); // #b3d4cb
+              @debug color.scale(#998099, $alpha: -40%); // rgba(153, 128, 153, 0.6)
+            ```
+
+      - #### 變更透明
+        將 `$color` 變更透明。
+        ```scss
+          transparentize($color, $amount)
+          fade-out($color, $amount) //=> color 
+        ```
+          - 範例：
+            ```scss
+              @debug transparentize(rgba(#6b717f, 0.5), 0.2);  // rgba(107, 113, 127, 0.3)
+              @debug fade-out(rgba(#e1d7d2, 0.5), 0.4);  // rgba(225, 215, 210, 0.1)
+              @debug transparentize(rgba(#036, 0.3), 0.3);  // rgba(0, 51, 102, 0)
+            ```
+
+      - #### 返回HWB(色調)黑度
+        ```scss
+          color.blackness($color) //=> number  
+        ```
+          - 範例：
+          ```scss
+            @debug color.blackness(#e1d7d2); // 11.7647058824%
+            @debug color.blackness(white); // 0%
+            @debug color.blackness(black); // 100%
+          ```
+
+      - #### 返回HWB(色調)白度
+        ```scss
+          color.whiteness($color) //=> number  
+        ```
+          - 範例：
+          ```scss
+            @debug color.whiteness(#e1d7d2); // 82.3529411765%
+            @debug color.whiteness(white); // 100%
+            @debug color.whiteness(black); // 0%
+          ```
+
+  - ### `sass:list`
+    - #### 新增
+      將單個值 `$val` 添加到列表尾端。
+      `$separator` 為分隔符，默認會自動偵測，可指定 `逗號(comma)` 或 `空格(space)`。
+      ```scss
+        list.append($list, $val, $separator: auto)
+        append($list, $val, $separator: auto) //=> list 
+      ```
+        - 範例：
+        ```scss
+          @debug list.append(10px 20px, 30px); // 10px 20px 30px
+          @debug list.append((blue, red), green); // blue, red, green
+          @debug list.append(10px 20px, 30px 40px); // 10px 20px (30px 40px)
+          @debug list.append(10px, 20px, $separator: comma); // 10px, 20px
+          @debug list.append((blue, red), green, $separator: space); // blue red green
+        ```
+
+    - #### 查找
+      返回列表中 `$value` 所在的索引值。
+      沒找到，則返回 `null`。
+      ```scss
+        list.index($list, $value)
+        index($list, $value) //=> number | null 
+      ```
+        - 範例：
+        ```scss
+          @debug list.index(1px solid red, 1px); // 1
+          @debug list.index(1px solid red, solid); // 2
+          @debug list.index(1px solid red, dashed); // null
+        ```
+
+    - #### 是否有中括號
+      判斷列表中是否有中括號
+      ```scss
+        list.is-bracketed($list)
+        is-bracketed($list) //=> boolean 
+      ```
+        - 範例：
+        ```scss
+          @debug list.is-bracketed(1px 2px 3px); // false
+          @debug list.is-bracketed([1px, 2px, 3px]); // true
+        ```
+
+    - #### 合併
+      合併兩列表，將 `$list2` 添加到 `$list1` 尾端。
+      `$separator` 是分隔符，默認會自動偵測，可指定 `逗號(comma)` 或 `空格(space)`。
+      `$bracketed` 默認會自動偵測是否有中括號，可以設置 `true` 或 `false`。
+      ```scss
+        list.join($list1, $list2, $separator: auto, $bracketed: auto)
+        join($list1, $list2, $separator: auto, $bracketed: auto) //=> list 
+      ```
+        - 範例：
+        ```scss
+          @debug list.join(10px 20px, 30px 40px); // 10px 20px 30px 40px
+          @debug list.join((blue, red), (#abc, #def)); // blue, red, #abc, #def
+          @debug list.join(10px, 20px); // 10px 20px
+          @debug list.join(10px, 20px, $separator: comma); // 10px, 20px
+          @debug list.join((blue, red), (#abc, #def), $separator: space); // blue red #abc #def
+          @debug list.join([10px], 20px); // [10px 20px]
+          @debug list.join(10px, 20px, $bracketed: true); // [10px 20px]
+        ```
+
+    - #### 長度
+      返回 `$list` 的長度。
+      ```scss
+        list.length($list)
+        length($list) //=> number 
+      ```
+        - 範例：
+        ```scss
+          @debug list.length(10px); // 1
+          @debug list.length(10px 20px 30px); // 3
+          @debug list.length((width: 10px, height: 20px)); // 2
+        ```
+
+    - #### 分隔符類型
+      返回列表的分隔符類型，可以是 `空格(space)` 或 `逗號(comma)`。
+      若 `$list` 沒有分隔符，則返回 `space`。
+      ```scss
+        list.separator($list)
+        list-separator($list) //=> unquoted string 
+      ```
+        - 範例：
+        ```scss
+          @debug list.separator(1px 2px 3px); // space
+          @debug list.separator(1px, 2px, 3px); // comma
+          @debug list.separator('Helvetica'); // space
+          @debug list.separator(()); // space
+        ```
+
+    - #### 取得index的值
+      返回索引處的值。
+      索引從1起算。
+      若 `$n` 為負數，則從尾端開始計算。
+      ```scss
+        list.nth($list, $n)
+        nth($list, $n) 
+      ```
+        - 範例：
+        ```scss
+          @debug list.nth(10px 12px 16px, 2); // 12px
+          @debug list.nth([line1, line2, line3], -1); // line3
+        ```
+
+    - #### 設置index的值
+      返回替換 `$n` 處的值後的lists。
+      索引從1起算。
+      若 `$n` 為負數，則從尾端開始計算。
+      ```scss
+        list.set-nth($list, $n, $value)
+        set-nth($list, $n, $value) //=> list
+      ```
+        - 範例：
+        ```scss
+          @debug list.set-nth(10px 20px 30px, 1, 2em); // 2em 20px 30px
+          @debug list.set-nth(10px 20px 30px, -1, 8em); // 10px, 20px, 8em
+          @debug list.set-nth((Helvetica, Arial, sans-serif), 3, Roboto); // Helvetica, Arial, Roboto
+        ```
+
+    - #### 依相同索引產生新維度列表
+      將多個列表按照相同索引值為一組，重新組成一個新的多維度列表。
+      返回與列表中最短的列表一樣長的 lists。
+      主列表以逗號分隔，子列表以空格分隔。
+      ```scss
+        list.zip($lists...)
+        zip($lists...) //=> list 
+      ```
+        - 範例：
+        ```scss
+          @debug list.zip(10px 50px 100px, short mid long); // 10px short, 50px mid, 100px long
+          @debug list.zip(10px 50px 100px, short mid); // 10px short, 50px mid
+        ```
+
+  - ### `sass:map`
+    - #### 取值
+      返回map中key對應的value，如果沒有對應的key，則返回null。
+      ```scss
+        map.get($map, $key, $keys...)
+        map-get($map, $key, $keys...) 
+      ```
+        - 範例：
+        ```scss
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+          @debug map.get($font-weights, "medium"); // 500
+          @debug map.get($font-weights, "extra-bold"); // null
+        ```
+
+    - #### 是否有key
+      判斷 map 是否有對應的key，返回 Boolean。
+      ```scss
+        map.has-key($map, $key, $keys...)
+        map-has-key($map, $key, $keys...) //=> boolean 
+      ```
+        - 範例：
+        ```scss
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+          @debug map.has-key($font-weights, "regular"); // true
+          @debug map.has-key($font-weights, "bolder"); // false
+        ```
+
+    - #### 所有key
+      返回所有鍵。
+      ```scss
+        map.keys($map)
+        map-keys($map) //=> list 
+      ```
+        - 範例：
+        ```scss
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+          @debug map.keys($font-weights); // "regular", "medium", "bold"
+        ```
+
+    - #### 所有value
+      返回所有值。
+      ```scss
+        map.values($map)
+        map-values($map) //=> list 
+      ```
+        - 範例：
+        ```scss
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+          @debug map.values($font-weights); // 400, 500, 700
+        ```
+
+    - #### 變更
+      如果有找到 `$key`，將 `$value` 設置為新的值。
+      若沒找到，則返回原本的資料
+      ```scss
+        map.set($map, $key, $value)
+        map.set($map, $keys..., $key, $value) //=> map 
+      ```
+        - 範例：
+          ```scss
+            $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+            @debug map.set($font-weights, "regular", 300);
+            // ("regular": 300, "medium": 500, "bold": 700)
+          ```
+          巢狀嵌套設定
+          ```scss
+            $fonts: (
+              "Helvetica": (
+                "weights": (
+                  "regular": 400,
+                  "medium": 500,
+                  "bold": 700
+                )
+              )
+            );
+
+            @debug map.set($fonts, "Helvetica", "weights", "regular", 300);
+            // (
+            //   "Helvetica": (
+            //     "weights": (
+            //       "regular": 300,
+            //       "medium": 500,
+            //       "bold": 700
+            //     )
+            //   )
+            // )
+          ```
+
+    - #### 合併
+      合併兩個以上的map，形成一個新的 map，
+      將 `map2` 新增到 `map1` 的尾部。
+      如果兩者有相同的 key，則 `map1` 優先。
+
+      ```scss
+        map.merge($map1, $map2)
+        map-merge($map1, $map2)
+        map.merge($map1, $keys..., $map2)
+        map-merge($map1, $keys..., $map2) //=> map 
+      ```
+        - 範例：
+        ```scss
+          $light-weights: ("lightest": 100, "light": 300);
+          $heavy-weights: ("medium": 500, "bold": 700);
+
+          @debug map.merge($light-weights, $heavy-weights);
+          // ("lightest": 100, "light": 300, "medium": 500, "bold": 700)
+        ```
+        ```scss
+          $fonts: (
+            "Helvetica": (
+              "weights": (
+                "lightest": 100,
+                "light": 300
+              )
+            )
+          );
+          $heavy-weights: ("medium": 500, "bold": 700);
+
+          @debug map.merge($fonts, "Helvetica", "weights", $heavy-weights);
+          // (
+          //   "Helvetica": (
+          //     "weights": (
+          //       "lightest": 100,
+          //       "light": 300,
+          //       "medium": 500,
+          //       "bold": 700
+          //     )
+          //   )
+          // )
+        ```
+
+    - #### 移除
+      移除 map 中的 `$key`。
+      若沒有找到，則忽略。
+      ```scss
+        map.remove($map, $keys...)
+        map-remove($map, $keys...) //=> map 
+      ```
+        - 範例：
+        ```scss
+          $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+          @debug map.remove($font-weights, "regular"); // ("medium": 500, "bold": 700)
+          @debug map.remove($font-weights, "regular", "bold"); // ("medium": 500)
+          @debug map.remove($font-weights, "bolder");
+          // ("regular": 400, "medium": 500, "bold": 700)
+        ```
+
+  - ### `sass:math`
+    - #### 判斷是否有相同的單位
+      返回 `$number1` 是否與 `$number2` 有相同的單位。
+      若為 `true`，則 `$number1` 與 `$number2` 可以安全地進行 加法、減法和比較。
+      ```scss
+        math.compatible($number1, $number2)
+        comparable($number1, $number2) //=> boolean 
+      ```
+        - 範例：
+        ```scss
+          @debug math.compatible(2px, 1px); // true
+          @debug math.compatible(100px, 3em); // false
+          @debug math.compatible(10cm, 3mm); // true
+        ```
+
+    - #### 判斷是否沒有單位
+      返回 `$number` 是否沒有單位
+      ```scss
+        math.is-unitless($number)
+        unitless($number) //=> boolean 
+      ```
+        - 範例：
+        ```scss
+          @debug math.is-unitless(100); // true
+          @debug math.is-unitless(100px); // false
+        ```
+
+    - #### 絕對值
+      返回絕對值。
+      ```scss
+        math.abs($number)
+        abs($number) //=> number 
+      ```
+        - 範例：
+        ```scss
+          @debug math.abs(10px); // 10px
+          @debug math.abs(-10px); // 10px
+        ```
+
+    - #### 向上取整
+      向上取得整數。
+      ```scss
+        math.ceil($number)
+        ceil($number) //=> number  
+      ```
+        - 範例：
+        ```scss
+          @debug math.ceil(4); // 4
+          @debug math.ceil(4.2); // 5
+          @debug math.ceil(4.9); // 5
+        ```
+
+    - #### 向下取整
+      向下取得整數。
+      ```scss
+        math.floor($number)
+        floor($number) //=> number 
+      ```
+        - 範例：
+        ```scss
+          @debug math.floor(4); // 4
+          @debug math.floor(4.2); // 4
+          @debug math.floor(4.9); // 4
+        ```
+
+    - #### 最大值
+      返回最大值。
+      ```scss
+        math.max($number...)
+        max($number...) //=> number
+      ```
+        - 範例：
+        ```scss
+          @debug math.max(1px, 4px); // 4px
+
+          $widths: 50px, 30px, 100px;
+          @debug math.max($widths...); // 100px
+        ```
+
+    - #### 最小值
+      返回最小值。
+      ```scss
+        math.min($number...)
+        min($number...) //=> number 
+      ```
+      - 範例：
+        ```scss
+          @debug math.min(1px, 4px); // 1px
+
+          $widths: 50px, 30px, 100px;
+          @debug math.min($widths...); // 30px
+        ```
+
+    - #### 除
+      返回 `$number1` 除以 `$number2` 的結果
+      ```scss
+        math.div($number1, $number2) //=> number 
+      ```
+        - 範例：
+        ```scss
+          @debug math.div(1, 2); // 0.5
+          @debug math.div(100px, 5px); // 20
+          @debug math.div(100px, 5); // 20px
+          @debug math.div(100px, 5s); // 20px/s
+        ```
+
+    - #### 轉為百分比
+      將無單位的 `$number` (通常是0到1之間的小數) 轉換為百分比。
+      此功能與 `$number * 100%` 相同。
+      ```scss
+        math.percentage($number)
+        percentage($number) //=> number 
+      ```
+        - 範例：
+        ```scss
+          @debug math.percentage(0.2); // 20%
+          @debug math.percentage(math.div(100px, 50px)); // 200%
+        ```
+
+    - #### 隨機數
+      ```scss
+        math.random($limit: null)
+        random($limit: null) //=> number 
+      ```
+      - 範例：
+        如果 `$limit` 是 `null`，則返回 0到1之間的隨機十進制數。
+        ```scss
+          @debug math.random(); // 0.2821251858
+          @debug math.random(); // 0.6221325814
+        ```
+        如果 `$limit` 是大於或等於1的數字，則返回 1到 `$limit` 之間的隨機整數。
+        ```scss
+          @debug math.random(10); // 4
+          @debug math.random(10000); // 5373
+        ```
+
+    - #### 四捨五入
+      將 `$number` 四捨五入，返回最接近該值的整數。
+      ```scss
+        math.round($number)
+        round($number) //=> number 
+      ```
+      - 範例：
+        ```scss
+          @debug math.round(4); // 4
+          @debug math.round(4.2); // 4
+          @debug math.round(4.9); // 5
+        ```
+
+  - ### `sass:selector`
+    用於查看與處理選擇器。
+    - #### 比較兩個選擇器匹配的範圍
+      判斷 `$super` 選擇器是否包含了 `$sub` 選擇器所匹配的範圍。
+      ```scss
+        selector.is-superselector($super, $sub)
+        is-superselector($super, $sub) //=> boolean
+      ```
+      - 範例：
+      ```scss
+        @debug selector.is-superselector("a", "a.disabled"); // true
+        @debug selector.is-superselector("a.disabled", "a"); // false
+        @debug selector.is-superselector("a", "sidebar a"); // true
+        @debug selector.is-superselector("sidebar a", "a"); // false
+        @debug selector.is-superselector("a", "a"); // true
+      ```
+
+    - #### 累加
+      將第二個之後的選擇器，添加到第一個選擇器後面。
+      ```scss
+        selector.append($selectors...)
+        selector-append($selectors...) //=> selector
+      ```
+        - 範例：
+        ```scss
+          @debug selector.append("a", ".disabled"); // a.disabled
+          @debug selector.append(".accordion", "__copy"); // .accordion__copy
+          @debug selector.append(".accordion", "__copy, __image");
+          // .accordion__copy, .accordion__image
+        ```
+    
+    - #### 擴展
+      與`@extend` 規則一樣。
+      `$selector` 返回使用以下 `@extend` 規則修改的副本。
+      ```scss
+        /* 副本 */
+        #{$extender} {
+          @extend #{$extendee};
+        }
+      ```
+      ```scss
+        selector.extend($selector, $extendee, $extender)
+        selector-extend($selector, $extendee, $extender) //=> selector
+      ```
+        - 範例：
+        ```scss
+          @debug selector.extend("a.disabled", "a", ".link"); // a.disabled, .link.disabled
+          @debug selector.extend("a.disabled", "h1", "h2"); // a.disabled
+          @debug selector.extend(".guide .info", ".info", ".content nav.sidebar");
+          // .guide .info, .guide .content nav.sidebar, .content .guide nav.sidebar
+        ```
+    
+    - #### 組合選擇器
+      返回組合嵌套的選擇器
+      ```scss
+        selector.nest($selectors...)
+        selector-nest($selectors...) //=> selector
+      ```
+        - 範例：
+        ```scss
+          @debug selector.nest("ul", "li"); // ul li
+          @debug selector.nest(".alert, .warning", "p"); // .alert p, .warning p
+          @debug selector.nest(".alert", "&:hover"); // .alert:hover
+          @debug selector.nest(".accordion", "&__copy"); // .accordion__copy
+        ```
+
+    - #### 返回選擇器值
+      ```scss
+        selector.parse($selector)
+        selector-parse($selector) //=> selector
+      ```
+        - 範例：
+        ```scss
+          @debug selector.parse(".main aside:hover, .sidebar p");
+          // ((unquote(".main") unquote("aside:hover")),
+          //  (unquote(".sidebar") unquote("p")))
+        ```
+
+    - #### 替換選擇器
+      將 `$selector` 中的 `$original` 替換為 `$replacement`。
+      ```scss
+        selector.replace($selector, $original, $replacement)
+        selector-replace($selector, $original, $replacement) //=> selector
+      ```
+        - 範例：
+        ```scss
+          @debug selector.replace("a.disabled", "a", ".link"); // .link.disabled
+          @debug selector.replace("a.disabled", "h1", "h2"); // a.disabled
+          @debug selector.replace(".guide .info", ".info", ".content nav.sidebar");
+          // .guide .content nav.sidebar, .content .guide nav.sidebar
+        ```
+
+    - #### 將兩組選擇器合成一個複合選擇器
+      若無法合成，則返回 `null`。
+      ```scss
+        selector.unify($selector1, $selector2)
+        selector-unify($selector1, $selector2) //=> selector | null
+      ```
+        - 範例：
+        ```scss
+          @debug selector.unify("a", ".disabled"); // a.disabled
+          @debug selector.unify("a.disabled", "a.outgoing"); // a.disabled.outgoing
+          @debug selector.unify("a", "h1"); // null
+          @debug selector.unify(".warning a", "main a"); // .warning main a, main .warning a
+        ```
+
+    - #### 將合成選擇器拆分為單個選擇器
+      ```scss
+        selector.simple-selectors($selector)
+        simple-selectors($selector) //=> list
+      ```
+        - 範例：
+        ```scss
+          @debug selector.simple-selectors("a.disabled"); // a, .disabled
+          @debug selector.simple-selectors("main.blog:after"); // main, .blog, :after
+        ```
+
+  - ### `sass:string`
+    - #### 轉換 帶引號的字符串
+      ```scss
+        string.quote($string)
+        quote($string) //=> string
+      ```
+        - 範例：
+        ```scss
+          @debug string.quote(Helvetica); // "Helvetica"
+          @debug string.quote("Helvetica"); // "Helvetica"
+        ```
+
+    - #### 轉換 不帶引號的字符串
+      ```scss
+        string.unquote($string)
+        unquote($string) //=> string
+      ```
+        - 範例：
+        ```scss
+          @debug string.unquote("Helvetica"); // Helvetica
+          @debug string.unquote(".widget:hover"); // .widget:hover
+        ```
+
+    - #### 查找 index
+      返回第一個查找到的索引值，若沒有找到則回傳 `null`。
+      ```scss
+        string.index($string, $substring)
+        str-index($string, $substring) //=> number
+      ```
+        - 範例：
+        ```scss
+          @debug string.index("Helvetica Neue", "Helvetica"); // 1
+          @debug string.index("Helvetica Neue", "Neue"); // 11
+        ```
+
+    - #### 插入
+      返回從 `$string` 的 `$index` 處插入 `$insert` 後的字串。
+      ```scss
+        string.insert($string, $insert, $index)
+        str-insert($string, $insert, $index) //=> string
+      ```
+        - 範例：
+          ```scss
+            @debug string.insert("Roboto Bold", " Mono", 7); // "Roboto Mono Bold"
+            @debug string.insert("Roboto Bold", " Mono", -6); // "Roboto Mono Bold"
+          ```
+          如果 `$index` 大於 $string 總長度，則會 $insert 在 `結尾`。
+          如果 `$index` 小於 字符串負長度，則會 $insert 在 `開頭`。
+          ```scss
+            @debug string.insert("Roboto", " Bold", 100); // "Roboto Bold"
+            @debug string.insert("Bold", "Roboto ", -100); // "Roboto Bold"
+          ```
+    
+    - #### 拆分
+      返回從 index `$start-at` 到 `$end-at` 的字串。
+      ```scss
+        string.slice($string, $start-at, $end-at: -1)
+        str-slice($string, $start-at, $end-at: -1) //=> string
+      ```
+        - 範例
+        ```scss
+          @debug string.slice("Helvetica Neue", 11); // "Neue"
+          @debug string.slice("Helvetica Neue", 1, 3); // "Hel"
+          @debug string.slice("Helvetica Neue", 1, -6); // "Helvetica"
+        ```
+    
+    - #### 轉 大寫
+      將 ASCII字母轉換為大寫。
+      ```scss
+        string.to-upper-case($string)
+        to-upper-case($string) //=> string
+      ```
+        - 範例
+        ```scss
+          @debug string.to-upper-case("Bold"); // "BOLD"
+          @debug string.to-upper-case(sans-serif); // SANS-SERIF
+        ```
+    
+    - #### 轉 小寫
+      將 ASCII字母轉換為小寫。
+      ```scss
+        string.to-lower-case($string)
+        to-lower-case($string) //=> string
+      ```
+        - 範例
+        ```scss
+          @debug string.to-lower-case("Bold"); // "bold"
+          @debug string.to-lower-case(SANS-SERIF); // sans-serif
+        ```
+
+    - #### 產生 uuid
+      隨機產生一個在當前Sass編譯中的唯一id。
+      ```scss
+        string.unique-id()
+        unique-id() //=> string
+      ```
+        - 範例
+       ```scss
+          @debug string.unique-id(); // uabtrnzug
+          @debug string.unique-id(); // u6w1b1def
+        ```
